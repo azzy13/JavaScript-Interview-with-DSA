@@ -7,7 +7,7 @@ function revStr(str) {
      const length = str.length - 1;
 
      //loop from the end
-     for (i = length; i >= 0; i--) {
+     for (let i = length; i >= 0; i--) {
           revArr.push(str[i]);
      }
 
