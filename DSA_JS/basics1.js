@@ -18,8 +18,8 @@ console.log(value1);
 
 function fibonaciNumber(n) {
      let n1 = 0,
-          n2 = 1,
-          nextTerm;
+         n2 = 1,
+         nextTerm;
 
      console.log('Fibonacci Series:');
 
@@ -41,23 +41,41 @@ function fibonacci(n) {
 }
 console.log(fibonacci(12));
 
-// <<<<<<<<<<<<<<<------------------------- Factorial of number -------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------- Factorial of number Approach One -------------------------------->>>>>>>
 
 function Factorial(n) {
+     let fact =1
      if (n < 0) {
           console.log('Error! Factorial for negative number does not exist.');
      } else if (n === 0) {
-          console.log(`The factorial of ${number} is ${n}.`);
+
+          console.log(`The Factorial of ${n} is ${fact}.`);
      } else {
-          let fact = 1;
+
           for (let i = 1; i <= n; i++) {
                fact *= i;
           }
-          console.log(`The factorial of ${n} is ${fact}.`);
+          console.log(`The Factorial of ${n} is ${fact}.`);
      }
 }
 let valued = Factorial(5);
 console.log(valued);
+
+// <<<<<<<<<<<<<<<------------------------- Factorial of number Approach Two-------------------------------->>>>>>>
+function factorial(n){
+     let fact = 1;
+     if (n == 0 || n == 1){
+          return fact;
+     }else{
+          for(var i = n; i >= 1; i--){
+               fact = fact * i;
+          }
+          return fact;
+     }
+}
+let n = 4;
+facts = factorial(n)
+console.log("The factorial of " + n + " is " + facts);
 
 // <<<<<<<<<<<<<<<------------------------- Palindrome -------------------------------->>>>>>>
 // program to check if the string is palindrome or not
