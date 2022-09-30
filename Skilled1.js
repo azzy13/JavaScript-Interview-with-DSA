@@ -172,4 +172,4 @@ const arr = [1, 5, 2, 4, 3];
 const result = arr.sort((a, b) => {
      return a - b;
 });
-console.log(result);
+console.log(result);  //[ 1, 2, 3, 4, 5 ]
