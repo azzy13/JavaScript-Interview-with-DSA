@@ -10,7 +10,7 @@ function binarySearch(nums,target){
                right =mid-1
           }
           else{
-               left=mid+1
+               left=mid+1f
           }
 
      }
@@ -23,7 +23,7 @@ console.log('The elements found at index:'+ result)
 //The Worst Case Time Complexity : O(logN)
 //Space Complexity : O(1) for iterative, O(logN) for recursive.
 
-// <<<<<<<<<<<<<<<-------------------------Liner Search------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<-------------------------Linear Search------------------------------------------->>>>>>>
 
 const number = [2, 4, 67, 8, 44, 6, 12];
 function linearSearch(array, num) {
@@ -65,7 +65,7 @@ const merge =  (left, right)=> {
 
      return result;
 }
-var sortArray = function (nums) {
+const sortArray = function (nums) {
      if (nums.length <= 1) return nums;
      let mid = Math.floor(nums.length / 2);
      let left = sortArray(nums.slice(0,mid));
