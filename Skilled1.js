@@ -1,19 +1,19 @@
 // <<<<<<<<<<<<<<<-------------------------Reverse String -------------------------------->>>>>>>
 const str1 = 'I can catch you up JAVASCRIPT';
 
-function revStr(str) {
+function revStr() {
      // Take empty array
      const revArr = [];
      const length = str.length - 1;
 
      //loop from the end
      for (let i = length; i >= 0; i--) {
-          revArr.push(str[i]);
+          revArr.push(str1[i]);
      }
 
      return revArr.join('');
 }
-console.log(revStr(str));
+console.log(revStr(str1));
 
 // <<<<<<<<<<<<<<<-------------------------Reverse String 2 - way -------------------------------->>>>>>>
 const str2 = 'I can catch you up JAVASCRIPT';
@@ -30,12 +30,12 @@ console.log(revStr(str2));
 
 // <<<<<<<<<<<<<<<-------------------------Reverse String 3 - way -------------------------------->>>>>>>
 
-const stri = 'We are best';
+const str3 = 'We are best';
 
-function ReverseString(stri) {
-     return stri.split('').reverse().join('');
+function ReverseString() {
+     return str3.split('').reverse().join('');
 }
-console.log(ReverseString(stri));
+console.log(ReverseString(str3));
 
 // <<<<<<<<<<<<<<<-------------------------Reverse string in place -------------------------------->>>>>>>
 
