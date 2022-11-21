@@ -1,5 +1,5 @@
 // <<<<<<<<<<<<<<<-------------------------Reverse String -------------------------------->>>>>>>
-const str = 'I can catch you up JAVASCRIPT';
+const str1 = 'I can catch you up JAVASCRIPT';
 
 function revStr(str) {
      // Take empty array
@@ -15,7 +15,20 @@ function revStr(str) {
 }
 console.log(revStr(str));
 
-// <<<<<<<<<<<<<<<-------------------------Reverse String 2 -------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<-------------------------Reverse String 2 - way -------------------------------->>>>>>>
+const str2 = 'I can catch you up JAVASCRIPT';
+
+function revStr() {
+     let revStr = '';
+     for (let i = str2.length - 1; i >= 0; i--) {
+          revStr += str2[i];
+     }
+     return revStr;
+}
+
+console.log(revStr(str2));
+
+// <<<<<<<<<<<<<<<-------------------------Reverse String 3 - way -------------------------------->>>>>>>
 
 const stri = 'We are best';
 
@@ -66,8 +79,8 @@ const calc = {
      },
 };
 
-const result = calc.add(10).multiply(5).subtract(30).add(10); //30
-console.log(result.total);
+const results = calc.add(10).multiply(5).subtract(30).add(10); //30
+console.log(results.total);
 
 // <<<<<<<<<<<<<<<-------------------------Remove Duplicate Item From Array-------------------------------->>>>>>>
 //Brute Force Algo
@@ -155,11 +168,11 @@ console.log(resultt);
 
 // <<<<<<<<<<<<<<<-------------------------Check how many times an Element appears in an Array -------------------------------->>>>>>>
 
-const arr = ['a', 'b', 'a', 'a'];
+const arrCount = ['a', 'b', 'a', 'a'];
 
 let count = 0;
 
-arr.forEach((element) => {
+arrCount.forEach((element) => {
      if (element === 'a') {
           count += 1;
      }
@@ -172,4 +185,4 @@ const arr = [1, 5, 2, 4, 3];
 const result = arr.sort((a, b) => {
      return a - b;
 });
-console.log(result);  //[ 1, 2, 3, 4, 5 ]
+console.log(result); //[ 1, 2, 3, 4, 5 ]
