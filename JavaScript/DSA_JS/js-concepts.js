@@ -1,6 +1,6 @@
 /* 
 => clg for console.log
-=>
+
 
  => MongoDB connections
   1. Call back Hell , Inversion of Control - Call Back
@@ -743,7 +743,7 @@ console.log(func); //5
    - Currying function takes one function at a time returning a new function  expecting a next argument
  */
 // function(a,b) -> function(a)(b) this is currying function
-function a() {
+function a(a) {
      return function (b) {
           return `${a} ${b}`;
      };

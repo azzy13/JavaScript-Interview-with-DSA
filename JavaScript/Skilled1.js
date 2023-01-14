@@ -212,7 +212,7 @@ for (let i = 1; i < arr.length; i++) {
           duplicates.push(arr[i]);
      }
 }
-console.log(duplicates); //[ 3, 4 ]
+console.log(duplicates); //[ 3, 4 ]  // Pending - Concept not clear
 
 //<<<<<<<<<<<<<<<----------------------------------------- Javascript Program Swap two numbers --------------------------------------------->>>>>>>
 var a = 1;

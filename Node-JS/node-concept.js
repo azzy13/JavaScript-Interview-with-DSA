@@ -1,10 +1,68 @@
-// <<<<<<<<<<<<<<<---------------------------------------------  1. Async/await ---------------------------------------------------------->>>>>>>>>>>
+/* =====>                                              MongoDB[NoSql] VS Sql Differnce
+    - MongoDB is the most common database used with Node.js.
+    -  It is a NoSQL, cross-platform, document-oriented database that provides high performance, high availability, and easy scalability. 
+
+*/
+
+const mongoose = require('mongoose');
+mongoose
+     .connect(process.env.DATABASE_CLOUD, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          useCreateIndex: true,
+          useFindAndModify: false,
+     })
+     .then(() => console.log('DB connected'))
+     .catch((err) => console.log(err));
+
+const pool = new Pool({
+     user: process.env.PG_USER,
+     password: process.env.PG_PASSWORD,
+     host: process.env.PG_HOST,
+     port: process.env.PG_PORT,
+     database: process.env.PG_DATABASE,
+});
+
+module.exports = pool;
+
+// <<<<<<<<<<<<<<<---------------------------------------------  1. Event loop + Event Emiiter in node js ---------------------------------------------------------->>>>>>>>>>>
 
 /* 
+
 1. Async/Await is a way of writing promises that allows us to write asynchronous code in a synchronous way. Let's have a look.
 2. The event loop allows Node JS to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded 
 
 */
+// example -1
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%************************************************
+
+function resolveAfter2Seconds() {
+     return new Promise((resolve) => {
+          setTimeout(() => {
+               resolve('resolved');
+          }, 2000);
+     });
+}
+
+async function asyncCall() {
+     console.log('calling');
+     const result = await resolveAfter2Seconds();
+     console.log(result);
+     // Expected output: "resolved"
+}
+
+asyncCall();
+
+/*  Output
+> "calling"
+> "resolved"
+
+The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+ */
+
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%****************************************************
+
+//example -2
 const getData = async () => {
      try {
           const response = await fetch(
@@ -20,7 +78,9 @@ const getData = async () => {
 getData();
 
 /* 
-==> Globals - it is an object - that have multiple methods or functions as setTimeout , setInterval, micro Tasks queue
+==> Global objects are objects with a scope that is accessible across all of the modules of the Node.js application. 
+    There will not be any need to include the objects in every module. One of the objects is declared as global.
+     So, this is done to provide any functions, strings, or objects access across the application.
 
 Q1.. What is Node.js? Where can you use it?
 
@@ -51,6 +111,14 @@ Q4.. What Are The Benefits Of Using Node.js?
    - Battle-tested old hand, MVP development.
    - Community.
 
+Q5.. What is the framework that is used majorly in Node.js today?
+   -  [  Hapi.js , Express.js , Sails.js , Meteor.js , Derby.js , Adonis.js ]
+
+
+
+
+
+
 */
 
 /* 
@@ -65,13 +133,20 @@ Q1. What are streams in Node.js?
      - Transform − A type of duplex stream where the output is computed based on input 
 
 */
+
 const fs = require('fs');
 fs.writeFile(
      'DataFlairDemo.txt',
      'Learn Node.js from DataFlair',
+
+     /* DEFINING AN ERROR-FIRST CALLBACK  -
+        The first argument of the callback is reserved for an error object. If an error occurred, it will be returned by the first err argument.
+        The second argument of the callback is reserved for any successful response data. If no error occurred, err will be set to null and 
+        any successful data will be returned in the second argument.
+     */
      function (err, file) {
           if (err) throw err;
-          console.log('Saved!');
+          console.log('Saved!' + file);
      }
 );
 
@@ -100,7 +175,6 @@ Q4. What is callback hell?
     Callback hell, also known as the pyramid of doom, 
     is the result of intensively nested, unreadable, and unmanageable callbacks, which in turn makes the code harder to read and debug
     improper implementation of the asynchronous logic causes callback hell
-
 
 */
 
@@ -175,10 +249,39 @@ Third-party Modules.
    - Perfect for data-intensive, real-time web applications, as Node.js never waits for an API to return data
    - Easy for web developers to start using Node.js in their projects as it is a JavaScript library
 
-MongoDB is the most common database used with Node.js.
-It is a NoSQL, cross-platform, document-oriented database that provides high performance, high availability, and easy scalability.
  */
 
-/* What is the package.json file?
-The package.json file is the heart of a Node.js system. 
-This file holds the metadata for a particular project. The package.json file is found in the root directory of any Node application or module */
+/* 
+  Q14. What is the package.json file?
+    The package.json file is the heart of a Node.js system. 
+    This file holds the metadata for a particular project. The package.json file is found in the root directory of any Node application or module
+     It can also be used as a project identifier and deployed as a means to handle all of the project dependencies.
+  */
+
+/* Advanced Topics
+ -  What is meant by tracing in Node.js?
+      Tracing is a methodology used to collect all of the tracing information that gets generated by V8, the node core, and the userspace code. 
+      All of these are dumped into a log file and are very useful to validate and check the integrity of the information being passed.
+ - What is a passport in Node.js? - authentication like jwt
+ - How to get information about a file in Node.js? 
+   The fs.stat function is used to get the required information from a file.
+   The syntax is as follows:   fs.stat(path, callback)
+- How does the DNS lookup function work in Node.js?
+    The DNS lookup method uses a web address for its parameter and returns the IPv4 or IPv6 record, correspondingly.
+    There are other parameters such as the options that are used to set the input as an integer or an object. If nothing is provided here, both IPv4 and IPv6 are considered. 
+    The third parameter is for the callback function.
+    dns.lookup(address, options, callback)
+- What are stubs in Node.js? 
+     Stubs are simply functions that are used to assess and analyze individual component behavior.
+     When running test cases, stubs are useful in providing the details of the functions executed.
+- Why is assert used in Node.js?
+  Assert is used to explicitly write test cases to verify the working of a piece of code. The following code snippet denotes the usage of assert:
+- What is Libuv?
+- What is the difference between spawn and fork methods in Node.js?
+*/
+var assert = require('assert');
+function add(x, y) {
+     return x + y;
+}
+var result = add(3, 5);
+assert(result === 8, 'three summed with five is eight');
