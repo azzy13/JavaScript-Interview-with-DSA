@@ -2,6 +2,7 @@
 
 /* 
 1. Async/Await is a way of writing promises that allows us to write asynchronous code in a synchronous way. Let's have a look.
+2. The event loop allows Node JS to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded 
 
 */
 const getData = async () => {
@@ -23,54 +24,66 @@ getData();
 
 Q1.. What is Node.js? Where can you use it?
 
- => Node.js is an open-source, cross-platform JavaScript runtime environment and library to run web applications outside the client’s browser. 
-    It is used to create server-side web applications.
+   => Node.js is an open-source, cross-platform JavaScript runtime environment and library to run web applications outside the client’s browser. 
+      It is used to create server-side web applications.
 
-
- ///  Why use Node.js?
+Q2..  Why use Node.js?
    - It is generally fast
    - It rarely blocks
    - It offers a unified programming language and data type
    - Everything is asynchronous 
    - It yields great concurrency
 
+Q3..  Node.js is widely used in the following applications:
 
-/////How is Node.js most frequently used?
+   - Real-time chats
+   - Internet of Things  
+   - Complex SPAs (Single-Page Applications)
+   - Real-time collaboration tools
+   - Streaming applications
+   - Microservices architecture
 
-Node.js is widely used in the following applications:
 
-Real-time chats
-Internet of Things
-Complex SPAs (Single-Page Applications)
-Real-time collaboration tools
-Streaming applications
-Microservices architecture
+Q4.. What Are The Benefits Of Using Node.js?
+   - Easy to learn.
+   - Keeping things simple.
+   - Faster time-to-market, Scalability.
+   - Battle-tested old hand, MVP development.
+   - Community.
 
 */
 
 /* 
 
-Q2. What are streams in Node.js?
-=> Streams are objects that enable you to read data or write data continuously.
+Q1. What are streams in Node.js?
+    => Streams are objects that enable you to read data or write data continuously.
 
-There are four types of streams:
-
-Readable – Used for reading operations
-Writable − Used for write operations
-Duplex − Can be used for both reading and write operations
-Transform − A type of duplex stream where the output is computed based on input 
+ ** There are four types of streams:
+     - Readable – Used for reading operations
+     - Writable − Used for write operations
+     - Duplex − Can be used for both reading and write operations
+     - Transform − A type of duplex stream where the output is computed based on input 
 
 */
+const fs = require('fs');
+fs.writeFile(
+     'DataFlairDemo.txt',
+     'Learn Node.js from DataFlair',
+     function (err, file) {
+          if (err) throw err;
+          console.log('Saved!');
+     }
+);
 
 /* 
 Q3.
 What is REPL in Node.js?
-REPL stands for Read Eval Print Loop, and it represents a computer environment. 
-It’s similar to a Windows console or Unix/Linux shell in which a command is entered. Then, the system responds with an output
- - READ : Reads user's input, parse the input into javascript data-structures & stores in memory
- - Eval : Takes and evaluates the data structure
- - Print: Prints the results
- - Loop : Loops the above command untils user presses ctrl+c twice
+ -> REPL stands for Read Eval Print Loop, and it represents a computer environment. 
+ -> It’s similar to a Windows console or Unix/Linux shell in which a command is entered. Then, the system responds with an output
+   - READ : Reads user's input, parse the input into javascript data-structures & stores in memory
+   - Eval : Takes and evaluates the data structure
+   - Print: Prints the results
+   - Loop : Loops the above command untils user presses ctrl+c twice
 
 */
 
@@ -84,9 +97,9 @@ Piping is a mechanism used to connect the output of one stream to another stream
 
 /* 
 Q4. What is callback hell?
-Callback hell, also known as the pyramid of doom, 
-is the result of intensively nested, unreadable, and unmanageable callbacks, which in turn makes the code harder to read and debug
-improper implementation of the asynchronous logic causes callback hell
+    Callback hell, also known as the pyramid of doom, 
+    is the result of intensively nested, unreadable, and unmanageable callbacks, which in turn makes the code harder to read and debug
+    improper implementation of the asynchronous logic causes callback hell
 
 
 */
@@ -154,16 +167,6 @@ local Modules.
 Third-party Modules.
 
  */
-
-const fs = require('fs');
-fs.writeFile(
-     'DataFlairDemo.txt',
-     'Learn Node.js from DataFlair',
-     function (err, file) {
-          if (err) throw err;
-          console.log('Saved!');
-     }
-);
 
 /* 
   Q11. Why is Node.js preferred over other backend technologies like Java and PHP?

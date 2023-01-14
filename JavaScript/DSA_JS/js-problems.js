@@ -105,7 +105,7 @@ const userFive = {
      name: 'Dhananjay',
      age: 23,
 };
-const strObj = JSON.stringify(userFive);
+const strObj = JSON.stringify(userFive); //I would recommend using JSON.stringify, which converts the set of the variables in the object to a JSON string.
 // console.log(strObj);  {"name":"Dhananjay","age":23} - converted object as string
 console.log(JSON.parse(strObj)); //{ name: 'Dhananjay', age: 23 }
 
@@ -216,3 +216,9 @@ let students = [
 // console.log(names); // [ 'JOHN', 'TOM', 'WICK' ]
 
 let names = students.map((stu) => stu.name.toUpperCase()); //[ 'JOHN', 'TOM', 'WICK' ]
+
+(function () {
+     var a = (b = 5); //var a = b;    b = 5;
+})();
+
+console.log(b); //5

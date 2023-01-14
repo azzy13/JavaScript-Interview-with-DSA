@@ -213,3 +213,28 @@ for (let i = 1; i < arr.length; i++) {
      }
 }
 console.log(duplicates); //[ 3, 4 ]
+
+//<<<<<<<<<<<<<<<----------------------------------------- Javascript Program Swap two numbers --------------------------------------------->>>>>>>
+var a = 1;
+var b = 2;
+var temp; // way-1
+
+temp = a;
+a = b;
+b = temp;
+console.log(a, b); //2,1
+
+let a = 1;
+let b = 2;
+
+[a, b] = [b, a]; // Destructuring way -2
+console.log(a, b); //2,1
+//<<<<<<<<<<<<<<<---------------------------------- Javascript Program Swap two numbers using  Arithmetic Operators------------------------------------->>>>>>>
+let a = 1;
+let b = 2;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log(a, b); // Arithmetic way -3

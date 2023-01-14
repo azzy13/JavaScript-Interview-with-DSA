@@ -1,4 +1,8 @@
 /* 
+=> clg for console.log
+=>
+
+ => MongoDB connections
   1. Call back Hell , Inversion of Control - Call Back
   2. Promises - Creating Promise, Chaining , Error Handling
   3. Event Loop, Callback Queue, Microtask Queue
@@ -8,10 +12,22 @@
   7. Closures
   8. Hoisting
   9. Objects 
-  10. Currying
-  11. IIFE (Immediately Invoked Function Expression)
+  10. IIFE (Immediately Invoked Function Expression)
+  11. Currying
+  12. 'this' keyword
 
 */
+
+const mongoose = require('mongoose');
+mongoose
+     .connect(process.env.DATABASE_CLOUD, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          useCreateIndex: true,
+          useFindAndModify: false,
+     })
+     .then(() => console.log('DB connected'))
+     .catch((err) => console.log(err));
 
 //Tricy
 const val = [1, 2, 3, 4, 5];
@@ -30,7 +46,7 @@ let a=10
 ==> Temporal deal zone is a time since when let or const value is hoisted and till it is assigned some values.
 
 
-1.  let and const are hoisted. we cant use them before initialization is result of "temporal dead zone" 
+1.  let and const are hoisted. we can't use them before initialization is result of "temporal dead zone" 
       && JS use diff memory than global execution context to store let and cost. which is reason behind "temporal dead zone"
 2.  level of strictness ... var<<let<<const.
 
@@ -211,7 +227,7 @@ setTimeout(function cb() {
 
 console.log('End');
 
-// <<<<<<<<<<<<<<<-------------------------  4. Undefined vs Not defined  -------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<-------------------------  4. Undefined vs Not defined  ----------------------------------->>>>>>>>>>>
 /* 
 
 1. Undefined is like a placeholder till a variable is not assigned a value.
@@ -709,7 +725,7 @@ console.log(func); //5
 
 //Level-3
 
-// <<<<<<<<<<<<<<<----------------------------------------- 11. IIFE (Immediately Invoked Function Expression)  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<----------------------------------------- 10. IIFE (Immediately Invoked Function Expression)  ------------------------------------------------------->>>>>>>>>>>
 (function squareThree(num) {
      console.log(num * num);
 })(5); // wrap into parenthesis call it right away no need to invoke function is called IIFE
@@ -733,3 +749,13 @@ function a() {
      };
 }
 console.log(a(5)(6));
+
+// <<<<<<<<<<<<<<<----------------------------------------- 12. this keyword  ------------------------------------------------------->>>>>>>>>>>
+//Objects are not compared by value: two objects are not equal even if they have the same properties and values. This is true of arrays too: even if they have the same values in the same order.
+
+var o = { x: 1 },
+     p = { x: 1 }; // Two objects with the same properties
+o === p; // => false: distinct objects are never equal
+var a = [],
+     b = []; // Two distinct, empty arrays
+a === b; // => false: distinct arrays are never equal
