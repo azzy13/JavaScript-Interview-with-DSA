@@ -74,3 +74,18 @@ EVENT LOOP
 */
 
 // Use Quokka  - start on current file - stop on current
+
+/* 
+
+Q: Is MongoDB better than MySQL?
+A: It all depends on the type of data that you are working on whether it is structured or unstructured and your system requirement and use case.
+   If it is structured and needs a traditional relational database then for MySQL and if it is unstructured then go for MongoDB.
+
+Q: Can MongoDB replace MySQL?
+    MongoDB is a cross-platform document-oriented and NoSQL database that allows fast changes over time in the database as the application grows but both have their pros and cons
+     Mysql is open source, secure, and provides high flexibility 
+     whereas MongoDB provides speed, ability to handle unstructured data, etc. Considering all these points we can say yes MongoDB has the potential to replace MySQL.
+
+Q: Which database is fastest?
+A: Out of MySQL and MongoDB, MongoDB is fast because of its schema-less feature and ability to handle unstructured data.
+ */

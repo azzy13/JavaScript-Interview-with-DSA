@@ -1,6 +1,24 @@
-/* =====>                                              MongoDB[NoSql] VS Sql Differnce
-    - MongoDB is the most common database used with Node.js.
-    -  It is a NoSQL, cross-platform, document-oriented database that provides high performance, high availability, and easy scalability. 
+/* =====> 
+It is a NoSQL, cross-platform, document-oriented database that provides high performance, high availability, and easy scalability.
+                                                   MongoDB[NoSql] VS MySql Differnce
+
+    $$$$$$$$ MongoDB 
+    1.  Data Strucure : Data is stored and represented in JSON(Javascript Object Notation) like documents. 
+    2.  Schema : MongoDB stores data in collections with no enforced schema. In other words, incoming data can have a pre-defined structure &
+                 it can adhere to it, however, different documents in the same collection can have different structures if required.
+    3.  Performance : MongoDB is optimized for write performance ( means writing speed performance of MongoDB database is far greater than MySQL database).   
+    4. Scalability :  MongoDB databases can be scaled both vertically and horizontally ( horizontal scaling also known as Scaling out means adding additional nodes or 
+                      machines to your infrastructure to match new demands whereas vertical scaling is adding more power to your existing machine for example upgrading CPU and RAM ). 
+    5. Replication : In MongoDB, it uses sharding and replication ( sharding allows partitioning of data across multiple servers using the shared key &
+                     The technique of synchronizing (organizing) data across many servers to offer redundancy is known as replication). 
+
+    $$$$$$$$ MySql
+    1.  Data Strucure : Every record is stored as a table-cell structure with rows and column 
+    2.  Schema : MySQL requires a schema definition for the tables in the databases. 
+                 Therefore, the schema cannot be altered. Only inputs that conform to the given schema are accepted.
+    3.  Performance : MySQL is optimized for high-performance joins across multiple tabless
+    4.  Scalability : MySQL Database can be scaled vertically ( Scaling vertically means adding more power to your existing machine for example upgrading CPU and RAM).
+    5.  Replication : MySQL supports master-slave replication and master-master replication ( replication feature allows a server -the master to send all changes to another server – the slave).
 
 */
 
