@@ -34,6 +34,8 @@ const val = [1, 2, 3, 4, 5];
 val[10] = 6;
 console.log(val.length); //11
 console.log(val); //[ 1, 2, 3, 4, 5, <5 empty items>, 6 ]
+const arrays = [];
+console.log(typeof arrays); //object
 
 /* 
 // <<<<<<<<<<<<<<<---------------------------------------  -> Temporal Dead Zone ------------------------------------------------->>>>>>>>>>>

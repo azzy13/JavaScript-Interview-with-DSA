@@ -201,15 +201,15 @@ let resultss = arraySum(value);
 console.log(resultss);
 
 //<<<<<<<<<<<<<<<-------------------------Javascript Program To Remove Duplicates From A Given String -------------------------------->>>>>>>
-const arr = [1, 3, 4, 4, 5, 6, 3];
+const arrii = [1, 3, 4, 4, 5, 6, 3];
 const duplicates = [];
 
-for (let i = 1; i < arr.length; i++) {
+for (let i = 1; i < arrii.length; i++) {
      if (
-          duplicates.indexOf(arr[i]) === -1 &&
-          arr.indexOf(arr[i], i + 1) != -1
+          duplicates.indexOf(arrii[i]) === -1 &&
+          arrii.indexOf(arrii[i], i + 1) != -1
      ) {
-          duplicates.push(arr[i]);
+          duplicates.push(arrii[i]);
      }
 }
 console.log(duplicates); //[ 3, 4 ]  // Pending - Concept not clear
@@ -238,3 +238,76 @@ b = a - b;
 a = a - b;
 
 console.log(a, b); // Arithmetic way -3
+
+//<<<<<<<<<<<<<<<---------------------------------- Flatten the  Array without predefined function------------------------------------->>>>>>>
+
+/*
+
+https://www.youtube.com/watch?v=abbdJ4Yfm54  - Flatten array + setTimeout best question 
+
+- recursion
+ - we have empty result array(result)
+ - here we are mapping whole array(arr) with forEach loop
+ - 'ar' first in loop it will encounter first arr [1,2] then it will check is it array [here it find it's an array and depth is 1 by default]
+ - 'result.push' [1,2] now depth becomes 0  here it will check 1 is it array - no because depth is 0 and then move to else statement push to result and same for 2 in array
+ - [1,2] in loop it is checking 1 is array or not if not push to result then 2 it will check
+
+ 
+ */
+const arr = [
+     [1, 2],
+     [3, 4],
+     [5, 6, [7, 8], 9],
+     [10, 11, 12],
+];
+
+function customFlat(arr, depth = 1) {
+     let result = [];
+     arr.forEach((ar) => {
+          if (Array.isArray(ar) && depth > 0) {
+               result.push(...customFlat(ar, depth - 1));
+          } else result.push(ar);
+     });
+     return result;
+}
+console.log(customFlat(arr, 2)); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+console.log(customFlat(arr)); //[1, 2, 3, 4, 5, 6, [7, 8], 9, 10, 11, 12];
+
+//<<<<<<<<<<<<<<<------------------------------------------------  Explian Call Apply and Bind  -------------------------------------------------->>>>>>>
+var person = {
+     name: 'Dhananjay',
+     hello: function (thing) {
+          console.log(this.name + ' says hello ' + thing);
+     },
+};
+
+var alterEgo = {
+     name: 'iTech dhananjay',
+};
+
+person.hello.call(alterEgo, 'world'); //iTech dhananjay says hello world - call needs an object as params
+person.hello.apply(alterEgo, ['world']); //iTech dhananjay says hello world - apply will take args in array
+
+const newHello = person.hello.bind(alterEgo);
+newHello('world'); //iTech dhananjay says hello world - bind doesn't take the 2nd param - bind will return a function
+
+//<<<<<<<<<<<<<<<------------------------------------------------  Promise.all  -------------------------------------------------->>>>>>>
+function showText(text, time) {
+     return new Promise((resolve, reject) => {
+          setTimeout(() => {
+               resolve(text, time);
+          }, 1000);
+     });
+}
+// if one promise fails all promise gonna failed
+Promise.all([
+     showText('Hello', 1000),
+     Promise.resolve('Hi'),
+     Promise.reject('Bye'),
+])
+     .then((value) => {
+          console.log(value); //[ 'Hello', 'Hi', 'Bye' ] reject ->  resolve or else uncaught error
+     })
+     .catch((err) => {
+          console.log(err);
+     });
