@@ -16,7 +16,7 @@ It is a NoSQL, cross-platform, document-oriented database that provides high per
     1.  Data Strucure : Every record is stored as a table-cell structure with rows and column 
     2.  Schema : MySQL requires a schema definition for the tables in the databases. 
                  Therefore, the schema cannot be altered. Only inputs that conform to the given schema are accepted.
-    3.  Performance : MySQL is optimized for high-performance joins across multiple tabless
+    3.  Performance : MySQL is optimized for high-performance joins across multiple tables 
     4.  Scalability : MySQL Database can be scaled vertically ( Scaling vertically means adding more power to your existing machine for example upgrading CPU and RAM).
     5.  Replication : MySQL supports master-slave replication and master-master replication ( replication feature allows a server -the master to send all changes to another server – the slave).
 
@@ -96,9 +96,8 @@ const getData = async () => {
 getData();
 
 /* 
-==> Global objects are objects with a scope that is accessible across all of the modules of the Node.js application. 
-    There will not be any need to include the objects in every module. One of the objects is declared as global.
-     So, this is done to provide any functions, strings, or objects access across the application.
+==> Global objects are objects with a scope that is accessible across all of the modules of the Node.js application. There will not be any need to include the objects in every module.
+     One of the objects is declared as global.So, this is done to provide any functions, strings, or objects access across the application.
 
 Q1.. What is Node.js? Where can you use it?
 

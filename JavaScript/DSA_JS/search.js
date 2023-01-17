@@ -25,9 +25,9 @@ console.log('The elements found at index:' + result);
 // <<<<<<<<<<<<<<<-------------------------Linear Search------------------------------------------->>>>>>>
 
 const number = [2, 4, 67, 8, 44, 6, 12];
-function linearSearch(array, num) {
-     for (let i = 0; i < array.length; i++) {
-          if (array[i] === num) {
+function linearSearch(number, num) {
+     for (let i = 0; i < number.length; i++) {
+          if (number[i] === num) {
                return i;
           }
      }

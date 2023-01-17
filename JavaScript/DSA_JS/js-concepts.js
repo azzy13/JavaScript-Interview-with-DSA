@@ -202,7 +202,7 @@ function validateCart(cart) {
 
 // <<<<<<<<<<<<<<<-------------------------   3. EVENT LOOP  [ Microtask Queue has higher priority that Callback Queue or Task Queue] -------------------------->>>>>>>>>>>
 /* 
-    1. Javascript is synchronous single threaded language and it has one call stack [Present in JS Engine] and it call do one thing at a time. 
+    1. Javascript is synchronous single threaded language and it has one call stack [Present in JS Engine] and it can do one thing at a time. 
        & all the code of javascript is executed in the call stack (quickly executed whatever code comes in call stack)
     2. Whenever any JS program is run, a Global Execution Context (GEC) is created and put GEC in call stack. 
        & In GEC, now the whole code is run line by line 
@@ -382,6 +382,18 @@ function xyz() {
 
 b(xyz()); // Pass functions as arguments or another function or return a function inside a function callled First-class-function
 
+//7.First class function - function that is treated as variable it can do everything same as variable do .. pass as variable
+
+function squareTwo(num) {
+     return num * num;
+}
+
+function displaySquareTwo(fn) {
+     console.log('Square is', fn(5));
+}
+
+displaySquareTwo(squareTwo);
+
 // <<<<<<<<<<<<<<<-------------------------------------   6. Functional Programming --------------------------------------------------------->>>>>>>>>>>
 
 /* 
@@ -431,7 +443,7 @@ function y(x) {
 
      x();
 }
-
+y(x);
 ////////////////////////////////calculate the area,circumfrence and diameter of these 4 circles
 const radius = [1, 3, 2, 4];
 
@@ -761,3 +773,21 @@ o === p; // => false: distinct objects are never equal
 var a = [],
      b = []; // Two distinct, empty arrays
 a === b; // => false: distinct arrays are never equal
+
+// <<<<<<<<<<<<<<<----------------------------------------- 13 Prototype and Prototypal Inheritance in Javascript  ------------------------------------------------------->>>>>>>>>>>
+/* 
+ONE OBJECT TRYING TO GET THE PROPERTIES OF OTHER OBJECTS
+ */
+let objectOne = {
+     name: 'Dhananjay',
+     city: 'Noida',
+     getIntro: function () {
+          console.log(this.name + 'from' + this.city);
+     },
+};
+
+let objectTwo = {
+     name: 'Dhananjay-Update',
+};
+
+objectTwo.__proto__ = objectOne; // objectTwo.city = 'Noida' - 2nd object as access two first object

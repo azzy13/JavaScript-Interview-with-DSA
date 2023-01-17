@@ -152,14 +152,14 @@ callMine();
 
 // <<<<<<<<<<<<<<<-------------------------Factorial of number -------------------------------->>>>>>>
 function factorial(n) {
-     let value = 1;
+     let fact = 1;
      if (n == 0 || n == 1) {
-          return value;
+          return fact;
      } else {
           for (let i = n; i >= 1; i--) {
-               value = value * i;
+               fact = fact * i;
           }
-          return value;
+          return fact;
      }
 }
 
