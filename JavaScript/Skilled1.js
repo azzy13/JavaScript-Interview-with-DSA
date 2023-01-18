@@ -1,3 +1,46 @@
+// <<<<<<<<<<<<<<<----------------------------------- Bubble Sort without in-built method [Most asked sort question] ---------------------------------------------------->>>>>>>
+
+/* 
+20, 5, 1, 4, 80, 78 === i / here it will compare 20,5 (20-i ,5=j) first it will 20,20 
+5, 20, 1, 4, 80, 78 === j
+5, 1, 20, 4, 80, 78 === j
+5, 1, 4, 20, 80, 78 === j  / here 20 is sorted and 20 is not greater than 80 then return false
+
+
+20, 5, 1, 4, 80, 78 === i / here it will compare 20,5 (5-i ,1=j) 
+1, 4, 5, 20, 80, 78 === j
+1, 4, 5, 20, 80, 78 === j  / return false after 5 is sorted 
+
+ */
+let array = [20, 5, 1, 4, 80, 78];
+let swap;
+
+for (let i = 0; i < array.length; i++) {
+     for (let j = i; j < array.length; j++) {
+          if (array[i] > array[j]) {
+               swap = array[i];
+               array[i] = array[j];
+               array[j] = swap;
+          }
+     }
+}
+console.log(array); //[ 1, 4, 5, 20, 78, 80 ]
+
+// <<<<<<<<<<<<<<<-------------------------Count Characters in String-------------------------------->>>>>>>
+let string = 'hello world';
+function getCountCharacters(string) {
+     const histogram = {};
+     for (let i = 0; i < string.length; i++) {
+          const char = string[i];
+          if (!histogram[char]) {
+               histogram[char] = 0;
+          }
+          histogram[char]++;
+     }
+     return histogram;
+}
+console.log(getCountCharacters(string)); //{ h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+
 // <<<<<<<<<<<<<<<-------------------------Reverse String -------------------------------->>>>>>>
 const str1 = 'I can catch you up JAVASCRIPT';
 
@@ -36,6 +79,21 @@ function ReverseString() {
      return str3.split('').reverse().join('');
 }
 console.log(ReverseString(str3));
+
+//[ 1, 2, 3, 4 ]
+
+// <<<<<<<<<<<<<<<-------------------------Reverse Array of elements -------------------------------->>>>>>>
+
+let ars = [1, 2, 3, 4];
+let revAr = [];
+
+function revArr(ars) {
+     for (let i = ars.length - 1; i >= 0; i--) {
+          revAr.push(ars[i]);
+     }
+     return revAr;
+}
+console.log(revArr(ars)); //[ 4, 3, 2, 1 ]
 
 // <<<<<<<<<<<<<<<-------------------------Reverse string in place -------------------------------->>>>>>>
 
@@ -187,7 +245,7 @@ const result = arri.sort((a, b) => {
 });
 console.log(result); //[ 1, 2, 3, 4, 5 ]
 
-// <<<<<<<<<<<<<<<------------------------------------------------------------[ Sum of Array elements :- Anonymous Function ] -------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------------------[ Sum of Array elements :- Anonymous Function ] --------------------------------------->>>>>>>
 const value = [1, 2, 3, 4, 5];
 const arraySum = function (value) {
      let sum = 0;
@@ -199,6 +257,22 @@ const arraySum = function (value) {
 
 let resultss = arraySum(value);
 console.log(resultss);
+
+// <<<<<<<<<<<<<<<------------------------------------------------------------[ Multiple numbers in an array using for loops ] --------------------------------------->>>>>>>
+const ari = [2, 2, 3, 4];
+
+const multiply = (ari) => {
+     var pro = 1;
+     for (i = 0; i < ari.length; i++) pro = pro * ari[i];
+     return pro;
+};
+
+console.log(multiply(ari)); //48
+
+//2nd-way
+const pro = arr.reduce((a, b) => a * b, 1);
+
+console.log(pro); // 48
 
 //<<<<<<<<<<<<<<<-------------------------Javascript Program To Remove Duplicates From A Given String -------------------------------->>>>>>>
 const arrii = [1, 3, 4, 4, 5, 6, 3];
@@ -311,3 +385,79 @@ Promise.all([
      .catch((err) => {
           console.log(err);
      });
+
+//<<<<<<<<<<<<<<<------------------------------------  Merge Two Arrays and Remove Duplicate Items  ----------------------------------------------->>>>>>>
+
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
+
+function getUniqueAfterMerge(arr1, arr2) {
+     let arr = arr1.concat(arr2);
+     let uniqueArr = [];
+
+     for (let i = 0; i < arr.length; i++) {
+          if (uniqueArr.indexOf(arr[i]) === -1) {
+               uniqueArr.push(arr[i]);
+          }
+     }
+     return uniqueArr;
+}
+
+console.log(getUniqueAfterMerge(array1, array2)); //[ 1, 2, 3, 5 ] - also we can use for ...of loop to achieve this
+
+//<<<<<<<<<<<<<<<------------------------------------------ Create a two dimensional array  -------------------------------------------------------->>>>>>>
+
+function twoDimensionArray(a, b) {
+     let arr = [];
+
+     // creating two dimensional array
+     for (let i = 0; i < a; i++) {
+          for (let j = 0; j < b; j++) {
+               arr[i] = [];
+          }
+     }
+
+     // inserting elements to array
+     for (let i = 0; i < a; i++) {
+          for (let j = 0; j < b; j++) {
+               arr[i][j] = j;
+          }
+     }
+     return arr;
+}
+
+const x = 2;
+const y = 3;
+
+const resulti = twoDimensionArray(x, y);
+console.log(resulti); //[ [ 0, 1, 2 ], [ 0, 1, 2 ] ]
+
+//JavaScript Program to Shuffle Deck of Cards
+//JavaScript Iterators and Iterables - Programiz both the quest
+//JavaScript Regex
+//Array rotation
+
+/* 
+
+Using the RegExp() constructor function:
+You can also create a regular expression by calling the RegExp() constructor function. For example,
+const reguarExp = new RegExp('abc');
+For example,
+ */
+const regex = new RegExp(/^a...s$/);
+console.log(regex.test('alias')); // true
+
+//Q.1 Repeated letters in a string
+let myString = 'abababc';
+let resultOne = {};
+for (let str of myString) {
+     resultOne[str] = resultOne.hasOwnProperty(str) ? resultOne[str] + 1 : 1;
+}
+console.log(resultOne); //{ d: 1, h: 1, a: 3, n: 2, j: 1, y: 1 }
+
+//Q3.
+
+const newTodo = await pool.query(
+     'INSERT INTO todo (description) VALUES($1) RETURNING *',
+     [description]
+);

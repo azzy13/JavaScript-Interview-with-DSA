@@ -89,3 +89,98 @@ Q: Can MongoDB replace MySQL?
 Q: Which database is fastest?
 A: Out of MySQL and MongoDB, MongoDB is fast because of its schema-less feature and ability to handle unstructured data.
  */
+
+// program to check if an object is an array
+
+function checkObject(arr) {
+     // check if arr is array
+     const result = Array.isArray(arr);
+
+     if (result) {
+          console.log(`[${arr}] is an array.`);
+     } else {
+          console.log(`${arr} is not an array.`);
+     }
+}
+
+const array = [1, 2, 3];
+
+// call the function
+checkObject(array); //[1,2,3] is an array.
+
+//empty an array
+const arrays = [1, 2, 3];
+arrays.length = 0;
+console.log(arrays);
+
+/* for...of with Strings
+You can use for...of loop to iterate over string values. For example, */
+
+// string
+const string = 'code';
+
+// using for...of loop
+for (let i of string) {
+     console.log(i);
+}
+//c
+//o
+//d
+//e
+
+// program to merge and remove duplicate value from an array
+
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
+
+function getUniqueAfterMerge(arr1, arr2) {
+     // merge two arrays
+     let arr = arr1.concat(arr2);
+     let uniqueArr = [];
+
+     // loop through array
+     //The for..of loop in JavaScript allows you to iterate over iterable objects (arrays, sets, maps, strings etc). i - items in the iterable
+     for (let i of arr) {
+          if (uniqueArr.indexOf(i) === -1) {
+               uniqueArr.push(i);
+          }
+     }
+     console.log(uniqueArr);
+}
+
+// calling the function
+// passing array argument
+getUniqueAfterMerge(array1, array2); //[ 1, 2, 3, 5 ]
+
+/* 
+ - The two arrays are merged using the concat() method.
+ - The for...of loop is used to loop through all the elements of arr.
+ - The indexOf() method returns -1 if the element is not in the array.
+ Hence, during each iteration, if the element equals -1, the element is added to the uniqueArr array using the push() method.
+
+ 
+*/
+
+// let arr = [1,2,4,5,6,1,2,3,4,5,6,7,8,9,7,8,2,2,6,5,4,3,2,1,1,1]
+
+// function revAr(arr){
+//     let revArr= []
+//     for(let i = arr.length-1;i>=0;i--){
+//         revArr.push(arr[i])
+//     }
+//     return revArr;
+
+// }
+
+//pagination
+let limit = req.body.limit ? parseInt(req.body.limit) : 10;
+let skip = req.body.skip ? parseInt(req.body.limit) : 10;
+
+user.find({})
+     .skip(skip)
+     .limit(limit)
+     .exec((err, data) => {});
+
+//ngnix
+// let arr = [1,2,4,5,6,1,2,3,4,5,6,7,8,9,7,8,2,2,6,5,4,3,2,1,1,1]
+//

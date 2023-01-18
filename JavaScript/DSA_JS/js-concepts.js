@@ -37,6 +37,26 @@ console.log(val); //[ 1, 2, 3, 4, 5, <5 empty items>, 6 ]
 const arrays = [];
 console.log(typeof arrays); //object
 
+// <<<<<<<<<<<<<<<---------------------------------------  Increment (++) ------------------------------------------------->>>>>>>>>>>
+/*
+     ->  The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. 
+     -> y is operand and  ++ is operator 
+     -> ++ (y = ++x) : Prefix : means first the value of x is increase by 1 and so, x become 6 and then it will assign to 6 as y
+     -> ++ (b = a++) : Postfix : means a=5 initially when b = a++ means value of a already assign to b as 5 and then increment the value of a
+ */
+
+let x = 5;
+let y;
+y = ++x;
+console.log(x); //6
+console.log(y); //6
+
+let a = 5;
+let b;
+b = a++;
+console.log(a); //6
+console.log(b); //5
+
 /* 
 // <<<<<<<<<<<<<<<---------------------------------------  -> Temporal Dead Zone ------------------------------------------------->>>>>>>>>>>
 console.log(a)
