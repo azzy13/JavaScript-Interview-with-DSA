@@ -41,24 +41,6 @@ function fibonacci(n) {
 }
 console.log(fibonacci(12));
 
-// <<<<<<<<<<<<<<<------------------------- Factorial of number Approach One -------------------------------->>>>>>>
-
-function Factorial(n) {
-     let fact = 1;
-     if (n < 0) {
-          console.log('Error! Factorial for negative number does not exist.');
-     } else if (n === 0) {
-          console.log(`The Factorial of ${n} is ${fact}.`);
-     } else {
-          for (let i = 1; i <= n; i++) {
-               fact *= i;
-          }
-          console.log(`The Factorial of ${n} is ${fact}.`);
-     }
-}
-let valued = Factorial(5);
-console.log(valued);
-
 // <<<<<<<<<<<<<<<------------------------- Factorial of number Approach Two-------------------------------->>>>>>>
 function factorial(n) {
      let fact = 1;
