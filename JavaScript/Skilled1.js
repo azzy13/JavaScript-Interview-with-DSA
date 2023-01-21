@@ -1,4 +1,4 @@
-// <<<<<<<<<<<<<<<----------------------------------- Bubble Sort without in-built method [Most asked sort question] ---------------------------------------------------->>>>>>>
+// <<<<<<<<<<-------- Bubble Sort without in-built method [Most asked sort question] ----------------------->>>>>>>
 
 /* 
 20, 5, 1, 4, 80, 78 === i / here it will compare 20,5 (20-i ,5=j) first it will 20,20 
@@ -26,7 +26,7 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(array); //[ 1, 4, 5, 20, 78, 80 ]
 
-// <<<<<<<<<<<<<<<-------------------------Count Characters in String-------------------------------->>>>>>>
+// <<<<<<<---------------------  Count Characters in String  ---------------------------->>>>>>>
 let string = 'hello world';
 function getCountCharacters(string) {
      const histogram = {};
@@ -153,7 +153,7 @@ for (let i = 0; i < len; i++) {
 }
 console.log(bb);
 
-// <<<<<<<<<<<<<<<-------------------------Remove Duplicate Item From Array - 2nd easy way-------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<-------------------------Remove Duplicate Item From Array - 2nd easy way----------------------->>>>>>>
 
 const aaaaa = [1, 2, 1, 2, 3, 4, 5, 6, 7, 7, 6];
 const resultUniqueValues = [...new Set(aaaaa)];
