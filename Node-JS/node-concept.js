@@ -47,6 +47,11 @@ const pool = new Pool({
 
 module.exports = pool;
 
+const newTodo = await pool.query(
+     'INSERT INTO todo (description) VALUES($1) RETURNING *',
+     [description]
+);
+
 // <<<<<<<<<<<<-------------------------------------------  2. [[ Event loop + Event Emiiter in node js ]] ------------------------------------------------->>>>>>>>>>>
 
 /* 

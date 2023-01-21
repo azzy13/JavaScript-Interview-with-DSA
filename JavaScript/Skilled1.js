@@ -1,4 +1,4 @@
-// <<<<<<<<<<-------- Bubble Sort without in-built method [Most asked sort question] ----------------------->>>>>>>
+// <<<<<<<<-------------------------- 1. [[ Bubble Sort without in-built method {Most asked sort question} ]] --------------------------------------------------->>>>>>>
 
 /* 
 20, 5, 1, 4, 80, 78 === i / here it will compare 20,5 (20-i ,5=j) first it will 20,20 
@@ -12,6 +12,7 @@
 1, 4, 5, 20, 80, 78 === j  / return false after 5 is sorted 
 
  */
+
 let array = [20, 5, 1, 4, 80, 78];
 let swap;
 
@@ -26,12 +27,12 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(array); //[ 1, 4, 5, 20, 78, 80 ]
 
-// <<<<<<<---------------------  Count Characters in String  ---------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------- 2s. [[ Count Characters in String ]] --------------------------------------------------------------->>>>>>>
 let string = 'hello world';
 function getCountCharacters(string) {
      const histogram = {};
      for (let i = 0; i < string.length; i++) {
-          const char = string[i];
+          let char = string[i];
           if (!histogram[char]) {
                histogram[char] = 0;
           }
@@ -41,7 +42,7 @@ function getCountCharacters(string) {
 }
 console.log(getCountCharacters(string)); //{ h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
 
-// <<<<<<<<<<<<<<<-------------------------Reverse String -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------- 3. [[ Reverse String  - Way : 1  ]] ----------------------------------------------------------------->>>>>>>
 const str1 = 'I can catch you up JAVASCRIPT';
 
 function revStr() {
@@ -57,8 +58,7 @@ function revStr() {
      return revArr.join('');
 }
 console.log(revStr(str1));
-
-// <<<<<<<<<<<<<<<-------------------------Reverse String 2 - way -------------------------------->>>>>>>
+// <<<<<<<<-------------------------------------------------  [[ Reverse String  - Way : 2  ]] ------------------------------------------------------------------->>>>>>>
 const str2 = 'I can catch you up JAVASCRIPT';
 
 function revStr() {
@@ -71,7 +71,7 @@ function revStr() {
 
 console.log(revStr(str2));
 
-// <<<<<<<<<<<<<<<-------------------------Reverse String 3 - way -------------------------------->>>>>>>
+// <<<<<<<<-------------------------------------------------  [[ Reverse String  - Way : 3  ]] ------------------------------------------------------------------->>>>>>>
 
 const str3 = 'We are best';
 
@@ -80,9 +80,7 @@ function ReverseString() {
 }
 console.log(ReverseString(str3));
 
-//[ 1, 2, 3, 4 ]
-
-// <<<<<<<<<<<<<<<-------------------------Reverse Array of elements -------------------------------->>>>>>>
+// <<<<<<<<-------------------------------------------------  [[ Reverse Array  - Way : 4  ]] ------------------------------------------------------------------->>>>>>>
 
 let ars = [1, 2, 3, 4];
 let revAr = [];
@@ -93,9 +91,9 @@ function revArr(ars) {
      }
      return revAr;
 }
-console.log(revArr(ars)); //[ 4, 3, 2, 1 ]
+console.log(revArr(ars)); //[ 4, 3, 2, 1 ] //[ 1, 2, 3, 4 ]
 
-// <<<<<<<<<<<<<<<-------------------------Reverse string in place -------------------------------->>>>>>>
+// <<<<<<<<---------------------------------------------------  [[ Reverse string in place ]] ------------------------------------------------------------------>>>>>>>
 
 const strin = 'I can catch you up JAVASCRIPT';
 function reverseInPlace() {
@@ -103,7 +101,7 @@ function reverseInPlace() {
 }
 console.log(reverseInPlace(strin));
 
-// <<<<<<<<<<<<<<<-------------------------Infinite Currying -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  [[ Infinite Currying ]] --------------------------------------------------------------------->>>>>>>
 //Q. USE ADD Function - console.log(add(5)(4)(3)(2)())
 
 function add(a) {
@@ -114,12 +112,14 @@ function add(a) {
 }
 console.log(add(5)(4)(3)(2)()); //14
 
-// <<<<<<<<<<<<<<<-------------------------Implement the code -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  [[ Implement the code ]] -------------------------------------------------------------------->>>>>>>
 
-//const result= calc.add(10).multiply(5).subtract(30).add(10)  -> console.log(result.total)
+/* 
+  const result= calc.add(10).multiply(5).subtract(30).add(10)  -> console.log(result.total)
+   here we are returning this because i need to return whole object over here(cal.add.multiply are function) 
+   only then we are going able to access the more of function of the object (calc)
 
-//here we are returning this because i need to return whole object over here(cal.add.multiply are function)
-//only then we are going able to access the more of function of the object (calc)
+ */
 
 const calc = {
      total: 0,
@@ -140,7 +140,7 @@ const calc = {
 const results = calc.add(10).multiply(5).subtract(30).add(10); //30
 console.log(results.total);
 
-// <<<<<<<<<<<<<<<-------------------------Remove Duplicate Item From Array-------------------------------->>>>>>>
+// <<<<<<<<---------------------------------------------------  [[ Remove Duplicate Item From Array]] ----------------------------------------------------------->>>>>>>
 //Brute Force Algo
 const aa = [1, 2, 1, 2, 3, 4, 5];
 const bb = [];
@@ -153,13 +153,14 @@ for (let i = 0; i < len; i++) {
 }
 console.log(bb);
 
-// <<<<<<<<<<<<<<<-------------------------Remove Duplicate Item From Array - 2nd easy way----------------------->>>>>>>
+// <<<<<<<<--------------------------------------------  [[ Remove Duplicate Item From Array -Way : 2]] --------------------------------------------------------->>>>>>>
 
 const aaaaa = [1, 2, 1, 2, 3, 4, 5, 6, 7, 7, 6];
 const resultUniqueValues = [...new Set(aaaaa)];
 console.log(resultUniqueValues);
 
-// <<<<<<<<<<<<<<<-------------------------Promise 1-way -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  [[ Promise - Way : 1 ]] ----------------------------------------------------------------------->>>>>>>
+
 const callMe = new Promise((resolve, reject) => {
      if (true) {
           resolve('Resolve');
@@ -174,8 +175,7 @@ callMe
      .catch((error) => {
           console.log(error);
      });
-
-// <<<<<<<<<<<<<<<-------------------------Promise 2-way -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  [[ Promise - Way : 2 ]] ---------------------------------------------------------------------->>>>>>>
 
 const f = () => {
      return 'I am f';
@@ -202,13 +202,10 @@ const callMine = async () => {
      let hh = h();
      console.log(hh);
 };
-callMine();
+callMine(); // I am f ->  I am g -> I am h
 
-// I am f
-// I am g
-// I am h
+// <<<<<<<<------------------------------------------------------  [[ Factorial of number ]] -------------------------------------------------------------------->>>>>>>
 
-// <<<<<<<<<<<<<<<-------------------------Factorial of number -------------------------------->>>>>>>
 function factorial(n) {
      let fact = 1;
      if (n == 0 || n == 1) {
@@ -224,10 +221,9 @@ function factorial(n) {
 const resultt = factorial(5);
 console.log(resultt);
 
-// <<<<<<<<<<<<<<<-------------------------Check how many times an Element appears in an Array -------------------------------->>>>>>>
+// <<<<<<<<----------------------------------------  [[ Check how many times an Element appears in an Array ]] ---------------------------------------------------->>>>>>>
 
 const arrCount = ['a', 'b', 'a', 'a'];
-
 let count = 0;
 
 arrCount.forEach((element) => {
@@ -238,14 +234,14 @@ arrCount.forEach((element) => {
 
 console.log(count);
 
-// <<<<<<<<<<<<<<<-------------------------Check how many times an Element appears in an Array -------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  [[ Sort an array - Way : 2]] -------------------------------------------------------------------->>>>>>>
 const arri = [1, 5, 2, 4, 3];
 const result = arri.sort((a, b) => {
      return a - b;
 });
 console.log(result); //[ 1, 2, 3, 4, 5 ]
 
-// <<<<<<<<<<<<<<<------------------------------------------------------------[ Sum of Array elements :- Anonymous Function ] --------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------- [[ Sum of Array elements :- Anonymous Function ]] ---------------------------------------------->>>>>>>
 const value = [1, 2, 3, 4, 5];
 const arraySum = function (value) {
      let sum = 0;
@@ -258,7 +254,7 @@ const arraySum = function (value) {
 let resultss = arraySum(value);
 console.log(resultss);
 
-// <<<<<<<<<<<<<<<------------------------------------------------------------[ Multiple numbers in an array using for loops ] --------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<----------------------------------------------   [[ Multiply numbers in an array using for loops ]] ---------------------------------------------->>>>>>>
 const ari = [2, 2, 3, 4];
 
 const multiply = (ari) => {
@@ -274,21 +270,7 @@ const pro = arr.reduce((a, b) => a * b, 1);
 
 console.log(pro); // 48
 
-//<<<<<<<<<<<<<<<-------------------------Javascript Program To Remove Duplicates From A Given String -------------------------------->>>>>>>
-const arrii = [1, 3, 4, 4, 5, 6, 3];
-const duplicates = [];
-
-for (let i = 1; i < arrii.length; i++) {
-     if (
-          duplicates.indexOf(arrii[i]) === -1 &&
-          arrii.indexOf(arrii[i], i + 1) != -1
-     ) {
-          duplicates.push(arrii[i]);
-     }
-}
-console.log(duplicates); //[ 3, 4 ]  // Pending - Concept not clear
-
-//<<<<<<<<<<<<<<<----------------------------------------- Javascript Program Swap two numbers --------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------------ [[ Swap two numbers with temp ]] ---------------------------------------------------------->>>>>>>
 var a = 1;
 var b = 2;
 var temp; // way-1
@@ -303,7 +285,9 @@ let b = 2;
 
 [a, b] = [b, a]; // Destructuring way -2
 console.log(a, b); //2,1
-//<<<<<<<<<<<<<<<---------------------------------- Javascript Program Swap two numbers using  Arithmetic Operators------------------------------------->>>>>>>
+
+// <<<<<<<<<<<<<<<---------------------------------------------   [[ Swap two numbers using  Arithmetic Operators]] ------------------------------------------------->>>>>>>
+
 let a = 1;
 let b = 2;
 
@@ -313,21 +297,20 @@ a = a - b;
 
 console.log(a, b); // Arithmetic way -3
 
-//<<<<<<<<<<<<<<<---------------------------------- Flatten the  Array without predefined function------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<--------------------------------------------   [[ Flatten the  Array without predefined function]] ------------------------------------------------->>>>>>>
 
 /*
-
 https://www.youtube.com/watch?v=abbdJ4Yfm54  - Flatten array + setTimeout best question 
 
-- recursion
+ - recursion
  - we have empty result array(result)
  - here we are mapping whole array(arr) with forEach loop
  - 'ar' first in loop it will encounter first arr [1,2] then it will check is it array [here it find it's an array and depth is 1 by default]
  - 'result.push' [1,2] now depth becomes 0  here it will check 1 is it array - no because depth is 0 and then move to else statement push to result and same for 2 in array
  - [1,2] in loop it is checking 1 is array or not if not push to result then 2 it will check
 
- 
  */
+
 const arr = [
      [1, 2],
      [3, 4],
@@ -347,7 +330,7 @@ function customFlat(arr, depth = 1) {
 console.log(customFlat(arr, 2)); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 console.log(customFlat(arr)); //[1, 2, 3, 4, 5, 6, [7, 8], 9, 10, 11, 12];
 
-//<<<<<<<<<<<<<<<------------------------------------------------  Explian Call Apply and Bind  -------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<-----------------------------------------------------   [[ Explian Call Apply and Bind ]] -------------------------------------------------------->>>>>>>
 var person = {
      name: 'Dhananjay',
      hello: function (thing) {
@@ -365,7 +348,7 @@ person.hello.apply(alterEgo, ['world']); //iTech dhananjay says hello world - ap
 const newHello = person.hello.bind(alterEgo);
 newHello('world'); //iTech dhananjay says hello world - bind doesn't take the 2nd param - bind will return a function
 
-//<<<<<<<<<<<<<<<------------------------------------------------  Promise.all  -------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<--------------------------------------------------------------- [[  Promise.all ]] ------------------------------------------------------------->>>>>>>
 function showText(text, time) {
      return new Promise((resolve, reject) => {
           setTimeout(() => {
@@ -386,26 +369,7 @@ Promise.all([
           console.log(err);
      });
 
-//<<<<<<<<<<<<<<<------------------------------------  Merge Two Arrays and Remove Duplicate Items  ----------------------------------------------->>>>>>>
-
-const array1 = [1, 2, 3];
-const array2 = [2, 3, 5];
-
-function getUniqueAfterMerge(arr1, arr2) {
-     let arr = arr1.concat(arr2);
-     let uniqueArr = [];
-
-     for (let i = 0; i < arr.length; i++) {
-          if (uniqueArr.indexOf(arr[i]) === -1) {
-               uniqueArr.push(arr[i]);
-          }
-     }
-     return uniqueArr;
-}
-
-console.log(getUniqueAfterMerge(array1, array2)); //[ 1, 2, 3, 5 ] - also we can use for ...of loop to achieve this
-
-//<<<<<<<<<<<<<<<------------------------------------------ Create a two dimensional array  -------------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------- [[  Create a two dimensional array  ]] --------------------------------------------------------->>>>>>>
 
 function twoDimensionArray(a, b) {
      let arr = [];
@@ -432,32 +396,38 @@ const y = 3;
 const resulti = twoDimensionArray(x, y);
 console.log(resulti); //[ [ 0, 1, 2 ], [ 0, 1, 2 ] ]
 
-//JavaScript Program to Shuffle Deck of Cards
-//JavaScript Iterators and Iterables - Programiz both the quest
-//JavaScript Regex
-//Array rotation
+// <<<<<<<<<<<----------------------------------------------- [[  Merge Two Arrays and Remove Duplicate Items ]] ---------------------------------------------------->>>>>>>
+
+const array1 = [1, 2, 3];
+const array2 = [2, 3, 5];
+
+function getUniqueAfterMerge(arr1, arr2) {
+     let arr = arr1.concat(arr2);
+     let uniqueArr = [];
+
+     for (let i = 0; i < arr.length; i++) {
+          if (uniqueArr.indexOf(arr[i]) === -1) {
+               uniqueArr.push(arr[i]);
+          }
+     }
+     return uniqueArr;
+}
+
+console.log(getUniqueAfterMerge(array1, array2)); //[ 1, 2, 3, 5 ] - also we can use for ...of loop to achieve this
 
 /* 
-
-Using the RegExp() constructor function:
-You can also create a regular expression by calling the RegExp() constructor function. For example,
-const reguarExp = new RegExp('abc');
-For example,
+   Using the RegExp() constructor function:
+   You can also create a regular expression by calling the RegExp() constructor function. For example,
+   const reguarExp = new RegExp('abc');
+   For example,
  */
+
 const regex = new RegExp(/^a...s$/);
 console.log(regex.test('alias')); // true
 
-//Q.1 Repeated letters in a string
-let myString = 'abababc';
-let resultOne = {};
-for (let str of myString) {
-     resultOne[str] = resultOne.hasOwnProperty(str) ? resultOne[str] + 1 : 1;
-}
-console.log(resultOne); //{ d: 1, h: 1, a: 3, n: 2, j: 1, y: 1 }
-
-//Q3.
-
-const newTodo = await pool.query(
-     'INSERT INTO todo (description) VALUES($1) RETURNING *',
-     [description]
-);
+/*
+   Q. JavaScript Program to Shuffle Deck of Cards
+   Q. JavaScript Iterators and Iterables - Programiz both the quest
+   Q. JavaScript Regex
+   Q.Array rotation 
+*/
