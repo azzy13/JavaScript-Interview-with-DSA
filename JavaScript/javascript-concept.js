@@ -1,20 +1,21 @@
+// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All concepts]] ------------------------------------------------>>>>>>>>>>>
 /* 
 => clg for console.log
-
-
- => MongoDB connections
-  1. Call back Hell , Inversion of Control - Call Back
-  2. Promises - Creating Promise, Chaining , Error Handling
-  3. Event Loop, Callback Queue, Microtask Queue
-  4. Undefined vs not defined
-  5. The Scope Chain, 🔥Scope & Lexical Environment 
-  6. Functions & Higher Order Functions
-  7. Closures
-  8. Hoisting
-  9. Objects 
-  10. IIFE (Immediately Invoked Function Expression)
-  11. Currying
-  12. 'this' keyword
+=> MongoDB connections
+  1. Increment (++)
+  2. Temporal Dead Zone
+  3. Call back Hell , Inversion of Control - Call Back
+  4. Promises - Creating Promise, Chaining , Error Handling
+  5. Event Loop, Callback Queue, Microtask Queue
+  6. Undefined vs Not defined
+  7. The Scope Chain, 🔥Scope & Lexical Environment
+  8. Functions Types & Higer Order Function
+  9. Closures
+  10. Objects {}
+  11. IIFE (Immediately Invoked Function Expression)
+  12. Currying
+  13. ['this'] keyword
+  14. Prototype and Prototypal Inheritance 
 
 */
 
@@ -29,7 +30,7 @@ mongoose
      .then(() => console.log('DB connected'))
      .catch((err) => console.log(err));
 
-//Tricy
+//Tricky
 const val = [1, 2, 3, 4, 5];
 val[10] = 6;
 console.log(val.length); //11
@@ -37,8 +38,8 @@ console.log(val); //[ 1, 2, 3, 4, 5, <5 empty items>, 6 ]
 const arrays = [];
 console.log(typeof arrays); //object
 
-// <<<<<<<<<<<<<<<---------------------------------------  Increment (++) ------------------------------------------------->>>>>>>>>>>
-/*
+// <<<<<<<<<<<<<<<------------------------------------------------ 1. [[ Increment (++) ]] ---------------------------------------------------->>>>>>>>>>>
+/*-
      ->  The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. 
      -> y is operand and  ++ is operator 
      -> ++ (y = ++x) : Prefix : means first the value of x is increase by 1 and so, x become 6 and then it will assign to 6 as y
@@ -58,7 +59,10 @@ console.log(a); //6
 console.log(b); //5
 
 /* 
-// <<<<<<<<<<<<<<<---------------------------------------  -> Temporal Dead Zone ------------------------------------------------->>>>>>>>>>>
+
+
+// <<<<<<<<<<<<<------------------------------------------------ 2. [[  Temporal Dead Zone ]] ---------------------------------------------------->>>>>>>>>>>
+
 console.log(a)
 let a=10
 
@@ -93,17 +97,16 @@ let a = 100; // Syntax Error : Identifier 'a' has already been declared
 const b = 1000;
 b = 10000; // Type Error : Assignment to constant variable.
 
-// <<<<<<<<<<<<<<<----------------------------------------- 1. Call back hell ------------------------------------------------------->>>>>>>>>>>
-
+// <<<<<<<<<<<<<------------------------------------------------ 3. [[  Call back hell ]] --------------------------------------------------------->>>>>>>>>>>
 /* 
 
 A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
      
       Call back hell - unreadable and unmaintaible - that's why called Pyramid of Doom
-      Inversion of Control - 
-      - Is when you lose control of your code when u are using cb
-      - Whenever we have cb function and pass it to some other function means we are giving control of this function to some other 
-        function - that leads what if prev function won't return anything
+      Inversion of Control :  
+       - Is when you lose control of your code when u are using cb
+       - Whenever we have cb function and pass it to some other function means we are giving control of this function to some other 
+         function - that leads what if prev function won't return anything
  */
 
 console.log('Hello 1.0');
@@ -124,23 +127,21 @@ api.createOrders(carts, function (orderId) {
      });
 });
 
-// <<<<<<<<<<<<<<<---------------------------------------------  2. Promises ---------------------------------------------------------->>>>>>>>>>>
-
+// <<<<<<<<<<<<<--------------------------------------------------- 4. [[  Promises ]] ------------------------------------------------------------>>>>>>>>>>>
 /* 
 
 1. What are Promises?
-The Promise is an object represents the eventual completion (or failure) of an asynchronous operation.[Best🫡]
-They are just like placeholders to store a future value that will be returned after some time.
-They contain two properties: PromiseState [ Pending ,Fulfilled ,Rejected] and PromiseResult.
-Promises are immutable so it can't be altered 
+     - The Promise is an object represents the eventual completion (or failure) of an asynchronous operation.[Best🫡]
+     - They are just like placeholders to store a future value that will be returned after some time.
+     - They contain two properties: PromiseState [ Pending ,Fulfilled ,Rejected] and PromiseResult.
+     * Promises are immutable so it can't be altered 
 
 2. Importance of Promises:
-a) Promises can help us to write trust worthy code.
-b) Promises are used to solve the problems of callbacks like inversion of control and callback hell.
-c) They give us the result prompt in three states: 1) Pending 2) Fulfilled 3) Rejected
-d) We can attach function to promise object and retrieve its value unlike callbacks no need to pass the function.
-e) Nesting can be done in Promises and with the help of that we can return the values in each individual chain.
-
+    a) Promises can help us to write trust worthy code.
+    b) Promises are used to solve the problems of callbacks like inversion of control and callback hell.
+    c) They give us the result prompt in three states: 1) Pending 2) Fulfilled 3) Rejected
+    d) We can attach function to promise object and retrieve its value unlike callbacks no need to pass the function.
+    e) Nesting can be done in Promises and with the help of that we can return the values in each individual chain.
 
 const GITHUB_API = ' https://api.github.com/users/itech-dhananjay';
 const user = fetch(GITHUB_API);
@@ -148,27 +149,11 @@ console.log(user);
 
 */
 
-let createOrders,
-     showOrderSummary,
-     proceedsToPayment,
-     updateCartBalance,
-     orderId;
-// attaching nested-function with .then() in promise
-createOrders(carts)
-     .then(function (orderId) {
-          return proceedsToPayment(orderId);
-     })
-     .then(function (paymentInfo) {
-          return showOrderSummary(paymentInfo);
-     })
-     .then(function (paymentInfo) {
-          return updateCartBalance(paymentInfo);
-     });
+// <<<<<<<<<<<<<------------------------------------------------- [[  Promises Miscellaneous ]] --------------------------------------------------->>>>>>>>>>>
 
-// <<<<<<<<<<<<<<<--------------------------------------------- 2. Promises Miscellaneous ------------------------------------------------->>>>>>>>>>>
 const cart = ['shoes', 'shirts', 'jeans'];
 
-//Promise Chaining
+// Promise Chaining
 // attaching catch with cb f(n) to handle errors in promise
 createOrder(cart)
      .then(function (orderId) {
@@ -220,7 +205,7 @@ function validateCart(cart) {
      return true;
 }
 
-// <<<<<<<<<<<<<<<-------------------------   3. EVENT LOOP  [ Microtask Queue has higher priority that Callback Queue or Task Queue] -------------------------->>>>>>>>>>>
+// <<--------------------------- 5. [[  EVENT LOOP  [ Microtask Queue has higher priority that Callback Queue or Task Queue ]]] -------------------------->>>>
 /* 
     1. Javascript is synchronous single threaded language and it has one call stack [Present in JS Engine] and it can do one thing at a time. 
        & all the code of javascript is executed in the call stack (quickly executed whatever code comes in call stack)
@@ -249,12 +234,12 @@ setTimeout(function cb() {
 
 console.log('End');
 
-// <<<<<<<<<<<<<<<-------------------------  4. Undefined vs Not defined  ----------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<----------------------------------------- 6. [[  Undefined vs Not defined  ]] ----------------------------------------------------->>>>>>>>>>>
 /* 
 
-1. Undefined is like a placeholder till a variable is not assigned a value.
-2. undefined !== not defined
-3. JS- weakly or loosely typed language since it doesn't depend on data type declarations
+  -  Undefined is like a placeholder till a variable is not assigned a value.
+  -  undefined !== not defined
+  -  JS- weakly or loosely typed language since it doesn't depend on data type declarations
 
 
 memory is already allocated to 'a'
@@ -281,8 +266,7 @@ a = 'Hello World'; //loosely typed-language as it can store undefined,number, st
 console.log(a); //Hello World
 a = undefined; // not a good practice to do this
 
-// <<<<<<<<<<<<<<<-------------------------   5. The Scope Chain, 🔥Scope & Lexical Environment [Do it later] -------------------------------->>>>>>>>>>>
-
+// <<<<----------------------------------- 7. [[   The Scope Chain, 🔥Scope & Lexical Environment [Do it later]  ]]] ----------------------------------->>>>>>>
 /* 
   To concise things:
 
@@ -319,10 +303,6 @@ a();
 
 
 
-
-
-
-
 */
 
 /* 
@@ -342,15 +322,16 @@ function a() {
 }
 a();
 console.log(b); // Reference Error : b is not defined
-// <<<<<<<<<<<<<<<-------------------------------------  6. Functions Types -------------------------------------------->>>>>>>>>>>
+
+// <<<<<<<<<<<<<-------------------------------------------- 8. [[ Functions Types ]] -------------------------------------------------------->>>>>>>>>>>
 /* 
-1. Function Statement aka Function Declaration - Hoisting diffrence b/w F(n) Statement & b/w F(n) Expression
-2. Function Expression
-3. Anonymous Function
-4. Named Function Expression
-5. Difference b/w Parameters and Arguments?
-6. Higher Order Functions
-7. Arrow Functions
+ 1.  Function Statement aka Function Declaration - Hoisting diffrence b/w F(n) Statement & b/w F(n) Expression
+ 2.  Function Expression
+ 3.  Anonymous Function
+ 4.  Named Function Expression
+ 5.  Difference b/w Parameters and Arguments?
+ 6.  Higher Order Functions
+ 7.  Arrow Functions
 
 
 */
@@ -414,7 +395,7 @@ function displaySquareTwo(fn) {
 
 displaySquareTwo(squareTwo);
 
-// <<<<<<<<<<<<<<<-------------------------------------   6. Functional Programming --------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<-----------------------------------------------  [[Functional Programming]] ------------------------------------------------------>>>>>>>>>>>
 
 /* 
 
@@ -447,7 +428,7 @@ function b() {
 1
  */
 
-// <<<<<<<<<<<<<<<----------------------------------------    Higher Order Function   -------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<-----------------------------------------------  [[ Higher Order functions ]] ----------------------------------------------------->>>>>>>>>>>
 
 /* 
 A f(n) which takes another f(n) as an argument or returns functions from it - Higher Order functions
@@ -491,7 +472,7 @@ console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
 console.log(calculate(radius, diameter));
 
-// <<<<<<<<<<<<<<<----------------------------------------    Higher Order Function [ Map , Filter , Reduce]   -------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<----------------------------------------  [[ Higher Order functions : [ Map , Filter , Reduce]]] ---------------------------------------->>>>>>>>>
 const arr = [1, 2, 3, 4, 5, 6];
 
 // Double && Binary["1","10","11","100","101","110"]
@@ -568,7 +549,7 @@ const outputB = arr.reduce(function (max, curr) {
 }, 0);
 console.log(outputB);
 
-////////////////////////////////////////////////////////////////
+////////
 const users = [
      { firstName: 'Dhananjay', lastName: 'Kumar', age: 25 },
      { firstName: 'Soumen', lastName: 'Pramanick', age: 26 },
@@ -594,7 +575,7 @@ const outputC = users.reduce(function (acc, curr) {
 }, {});
 console.log(outputC); //{ '22': 1, '25': 2, '26': 1 }
 
-////////////////////////////////////////////////////////////////////////
+/////////
 // first name of all users whose age is less than 30
 const outputD = users
      .filter((userAge) => userAge.age < 30)
@@ -602,7 +583,7 @@ const outputD = users
 
 console.log(outputD); //[ 'Dhananjay', 'Soumen' ]
 
-// <<<<<<<<<<<<<<<----------------------------------------- 7. Closures ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<------------------------------------------------ 9. [[ Closures ]] --------------------------------------------------------->>>>>>>>>>>
 /* 
 Prime Definition - The ability of function to access variables or functions that are lexically out of scope are called closures
 
@@ -703,7 +684,7 @@ outer()(); // An inner function can be directly called using two parenthesis ()(
 //Closures allocate a lot of memory which cannot be deleted so this acts as a disadvantage.
 // 3. Some browsers now have smart garbage collectors that automatically deletes variables that are not used outside closures.
 
-// <<<<<<<<<<<<<<<----------------------------------------- 8. Functions Hoisting  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<-----------------------------------------------  [[ Functions Hoisting ]] ------------------------------------------------------>>>>>>>>>
 var x = 21;
 var fun = function () {
      console.log(x); //undefined
@@ -716,7 +697,7 @@ fun();
    It will initialize the global scope and then again it  initialize the variable in local scope as well - first hoist the variable (console.log(x)-undefined)
  */
 
-// <<<<<<<<<<<<<<<----------------------------------------- Spread vs Rest Operator  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<-------------------------------------------  [[ Spread vs Rest Operator  ]] --------------------------------------------------->>>>>>>>>>>
 //Q1.
 function multiply(...nums) {
      //Rest Operator
@@ -731,7 +712,7 @@ const fn = (a, x, y, ...numbers) => {
 };
 fn(1, 2, 3, 4, 5);
 
-// <<<<<<<<<<<<<<<----------------------------------------- 9. Objects {}  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<------------------------------------------------ 10. [[ Objects {} ]] ----------------------------------------------------------->>>>>>>>>>>
 /* 
 
 1.  An object is a collection of properties, and a property is an association between a name (or key) and a value. 
@@ -759,7 +740,8 @@ console.log(func); //5
 
 //Level-3
 
-// <<<<<<<<<<<<<<<----------------------------------------- 10. IIFE (Immediately Invoked Function Expression)  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<--------------------------------- 11. [[ IIFE (Immediately Invoked Function Expression) ]] ------------------------------------------------>>>>>>>>>
+
 (function squareThree(num) {
      console.log(num * num);
 })(5); // wrap into parenthesis call it right away no need to invoke function is called IIFE
@@ -772,7 +754,7 @@ console.log(func); //5
      })(2);
 })(1);
 
-// <<<<<<<<<<<<<<<----------------------------------------- 11. Currying  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<----------------------------------------------------- 12. [[ Currying  ]] ----------------------------------------------------------->>>>>>>>>>>
 /* 
    - Currying function takes one function at a time returning a new function  expecting a next argument
  */
@@ -784,7 +766,7 @@ function a(a) {
 }
 console.log(a(5)(6));
 
-// <<<<<<<<<<<<<<<----------------------------------------- 12. this keyword  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<----------------------------------------------------- 13. [[ this keyword  ]] ----------------------------------------------------------->>>>>>>>>>>
 //Objects are not compared by value: two objects are not equal even if they have the same properties and values. This is true of arrays too: even if they have the same values in the same order.
 
 var o = { x: 1 },
@@ -794,7 +776,8 @@ var a = [],
      b = []; // Two distinct, empty arrays
 a === b; // => false: distinct arrays are never equal
 
-// <<<<<<<<<<<<<<<----------------------------------------- 13 Prototype and Prototypal Inheritance in Javascript  ------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<--------------------------------- 14. [[ Prototype and Prototypal Inheritance in Javascript]] ------------------------------------------------>>>>>>>>>
+
 /* 
 ONE OBJECT TRYING TO GET THE PROPERTIES OF OTHER OBJECTS
  */
