@@ -1,4 +1,4 @@
-// <<<<<<<<<<<<<<<------------------------- Check Prime Number -------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<----------------------------------------------- 1. [[ Check Prime Number  ]] --------------------------------------------------------->>>>>>>>>>>
 
 function isPrime(n) {
      if (n < 2) {
@@ -14,7 +14,7 @@ function isPrime(n) {
 const value1 = isPrime(6);
 console.log(value1);
 
-// <<<<<<<<<<<<<<<------------------------ Fibonacci series  up to n terms -------------------------------->>>>>>>
+// <<<<<<<<<<<<-------------------------------------------- 2. [[  Fibonacci series  up to n terms ]] ------------------------------------------------->>>>>>>>>>>
 
 function fibonaciNumber(n) {
      let n1 = 0,
@@ -41,7 +41,7 @@ function fibonacci(n) {
 }
 console.log(fibonacci(12));
 
-// <<<<<<<<<<<<<<<------------------------- Factorial of number Approach Two-------------------------------->>>>>>>
+// <<<<<<<<<<<<-------------------------------------------- 3. [[  Factorial of number Approach One ]] ------------------------------------------------->>>>>>>>>>>
 function factorial(n) {
      let fact = 1;
      if (n == 0 || n == 1) {
@@ -57,8 +57,7 @@ let n = 4;
 facts = factorial(n);
 console.log('The factorial of ' + n + ' is ' + facts);
 
-// <<<<<<<<<<<<<<<------------------------- Palindrome -------------------------------->>>>>>>
-// program to check if the string is palindrome or not
+// <<<<<<<<<<<<<<<---------------------------------------------------- 4. [[  Palindrome ]] ------------------------------------------------------------->>>>>>>>>>>
 
 function checkPalindrome(string) {
      // find the length of a string
@@ -79,7 +78,7 @@ const value = checkPalindrome(string);
 
 console.log(value);
 
-// <<<<<<<<<<<<<<<-------------------------Unique Array ---------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<---------------------------------------------------- 5. [[  Unique Array  ]] ----------------------------------------------------------->>>>>>>>>>>
 
 let arr = [1, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8];
 let uniqArr = [];
@@ -90,14 +89,3 @@ for (let i = 0; i < arr.length; i++) {
      }
 }
 console.log(uniqArr); //[ 3, 4, 6 ]
-
-// <<<<<<<<<<<<<<<-------------------------Unique Array[2] ---------------------------------->>>>>>>
-let ar = [1, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8];
-let uniqAr = [];
-
-for (let i = 0; i < ar.length; i++) {
-     if (ar[i] !== ar[i + 1]) {
-          uniqAr.push(ar[i]);
-     }
-}
-console.log(uniqAr); //[ 1, 2, 3, 4, 5, 6, 7, 8 ]

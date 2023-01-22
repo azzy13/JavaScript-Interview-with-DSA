@@ -14,7 +14,7 @@
          - forEach will not able to add additional method
  */
 
-// <<<<<<<<<<<<<<<----------------------------------------- 1. Objects {} ------------------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------- 1. [[  Objects {}  ]] --------------------------------------------------------->>>>>>>>>>>
 /* 
 
 1.  An object is a collection of properties, and a property is an association between a name (or key) and a value. 
@@ -153,7 +153,7 @@ const {
 } = userSeven;
 console.log(first); //Dhananjay
 
-// <<<<<<<<<<<<<<<--------------------------------------------- 2. Functions ()  -------------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------- 2. [[  Functions () ]] --------------------------------------------------------->>>>>>>>>>>
 
 //Q1. Function Expression
 // after const square = it is called anonymous function which has no name - this function can be assigned as variable or pass as callback function

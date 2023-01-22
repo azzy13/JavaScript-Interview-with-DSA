@@ -1,4 +1,5 @@
-// <<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -1 -------------------------------->>>>>>>
+// <<<<<<<<<<<--------------------------------------------- 1. [[  Conditional Statement : Level -1  ]] ------------------------------------------------->>>>>>>>>>
+
 // Set balance and price of item -> Check if there is enough funds to purchase item
 
 let itemPrice = 75;
@@ -10,7 +11,7 @@ if (cartBalance >= itemPrice) {
      console.log('Balance is low ! Sorry');
 }
 
-//<<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -2-------------------------------->>>>>>>
+// <<<<<<<<<<<--------------------------------------------- 2. [[  Conditional Statement : Level -2  ]] ------------------------------------------------->>>>>>>>>>
 
 //JavaScript will attempt to run all the statements in order, and if none of them are successful, it will default to the else block
 // Grade of 90 and above is an A : Grade of 80 to 89 is a B :  Grade of 70 to 79 is a C
@@ -25,13 +26,13 @@ if (Grade >= 90) {
      console.log('OK ! You have Grade : C');
 }
 
-//<<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -2 - Ternary Operator -------------------------------->>>>>>>
-// Set age of user
+// <<<<<<<<<<<---------------------------------------- 3. [[  Conditional Statement : Ternary Operator - 1  ]] ------------------------------------------->>>>>>>>>>
+
 let age = 18;
 const oldAge = age > 20 ? 'Age is above 20' : 'Age is below 20';
 console.log(oldAge);
 
-//<<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -2 - Ternary Operator -------------------------------->>>>>>>
+// <<<<<<<<<<<------------------------------------------ [[  Conditional Statement : Ternary Operator - 2  ]] -------------------------------------------->>>>>>>>>>
 // program to check if number is positive, negative or zero
 let number = 9;
 const checkNumber =
@@ -42,7 +43,7 @@ const checkNumber =
           : 'Number is negative';
 console.log(checkNumber); //Number is positive
 
-//<<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -3 - Switch Case -------------------------------->>>>>>>
+// <<<<<<<<<<<------------------------------------------- 4. [[  Conditional Statement : 'switch' case  ]] ------------------------------------------------->>>>>>>>>>
 let color = 'green';
 
 switch (color) {
@@ -63,7 +64,8 @@ switch (color) {
 }
 console.log('You match with color : ', color); //You match with color :  green
 
-//<<<<<<<<<<<<<<<-------------------------Conditional Statement : Level -2  Array.includes for Multiple Criteria  -------------------------------->>>>>>>
+// <<<<<<<<<<<--------------------------------------------- 5. [[  Conditional Statement : 'continue' ]] --------------------------------------------------->>>>>>>>>>
+
 //The continue statement is used to skip the current iteration of the loop and the control flow of the program goes to the next iteration.
 
 for (let i = 1; i <= 5; i++) {
@@ -75,7 +77,7 @@ for (let i = 1; i <= 5; i++) {
      console.log(i); // 1 2 {skip->3} 4 5
 }
 
-//<<<<<<<<<<<<<<<-------------------------JavaScript Constructor Function : Level -1   -------------------------------->>>>>>>
+// <<<<<<<<<<<------------------------------------------------ 6. [[  JavaScript Constructor Function  ]] -------------------------------------------------->>>>>>>>>>
 
 /* 
 In JavaScript, a constructor function is used to create objects. For example,
