@@ -38,41 +38,34 @@ console.log(linearSearch(number, 8)); //3
 console.log(linearSearch(number, 28)); //-1
 
 // <<<<<<<<<<<<<<<------------------------------------------------ 3. [[   Merge sort  ]] ------------------------------------------------------------->>>>>>>>>>>
-const merge = (left, right) => {
-     let result = [];
-     let i = 0;
-     let j = 0;
-     while (i < left.length && j < right.length) {
-          if (left[i] <= right[j]) {
-               result.push[left[i]];
-               i++;
+
+function mergeSort(arr) {
+     if (arr.length < 2) {
+          return arr;
+     }
+     const mid = Math.floor(arr.length / 2);
+     const leftArr = arr.slice(0, mid);
+     const rightArr = arr.slice(mid);
+     return merge(mergeSort(leftArr), mergeSort(rightArr));
+}
+
+function merge(leftArr, rightArr) {
+     const sortedArr = [];
+     while (leftArr.length && rightArr.length) {
+          if (leftArr[0] <= rightArr[0]) {
+               sortedArr.push(leftArr.shift()); // remove element from leftarr and push to sortedArr
           } else {
-               result.push(right[j]);
-               j++;
+               sortedArr.push(rightArr.shift());
           }
      }
-     while (i < left.length) {
-          result.push(left[i]);
-          i++;
-     }
-     while (j < right.length) {
-          result.push(right[j]);
-          j++;
-     }
+     const resultArr = [...sortedArr, ...leftArr, ...rightArr];
+     return resultArr;
+}
 
-     return result;
-};
-const sortArray = function (nums) {
-     if (nums.length <= 1) return nums;
-     let mid = Math.floor(nums.length / 2);
-     let left = sortArray(nums.slice(0, mid));
-     let right = sortArray(nums.slice(mid));
-     return merge(left, right);
-};
-let a = sortArray([5, 1, 1, 2, 0, 0]); //[ 0, 2, 5 ]
-console.log(a);
+const arr = [8, 20, -2, 4, -6];
+console.log(mergeSort(arr)); //[ -6, -2, 4, 8, 20 ]
 
-// <<<<<<<<----------------------------- 3. [[   Bubble Sort without in-built method [Most asked sort question] ]] --------------------------------------->>>>>>>>>>>
+// <<<<<<<<----------------------------- 4. [[   Bubble Sort without in-built method [Most asked sort question] ]] --------------------------------------->>>>>>>>>>>
 /* 
 20, 5, 1, 4, 80, 78 === i / here it will compare 20,5 (20-i ,5=j) first it will 20,20 
 5, 20, 1, 4, 80, 78 === j
