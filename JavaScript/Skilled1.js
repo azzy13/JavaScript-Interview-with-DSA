@@ -431,3 +431,12 @@ console.log(regex.test('alias')); // true
    Q. JavaScript Regex
    Q.Array rotation 
 */
+
+/* 
+
+Welcome  Dhananjay Kumar, Your Acknowledgement Number is 133642690M Please Note the same.
+
+133642690M 
+133642690M
+
+*/
