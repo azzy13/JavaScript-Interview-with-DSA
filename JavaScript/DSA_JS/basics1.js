@@ -14,7 +14,7 @@ function isPrime(n) {
 const value1 = isPrime(6);
 console.log(value1);
 
-// <<<<<<<<<<<<-------------------------------------------- 2. [[  Fibonacci series  up to n terms ]] ------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<-------------------------------------------- 2. [[  Fibonacci series  up to n terms ]] --------------------------------------------------->>>>>>>>>>>
 
 function fibonaciNumber(n) {
      let n1 = 0,
@@ -41,7 +41,7 @@ function fibonacci(n) {
 }
 console.log(fibonacci(12));
 
-// <<<<<<<<<<<<-------------------------------------------- 3. [[  Factorial of number Approach One ]] ------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<-------------------------------------------- 3. [[  Factorial of number Approach One ]] --------------------------------------------------->>>>>>>>>>>
 function factorial(n) {
      let fact = 1;
      if (n == 0 || n == 1) {
@@ -57,7 +57,7 @@ let n = 4;
 facts = factorial(n);
 console.log('The factorial of ' + n + ' is ' + facts);
 
-// <<<<<<<<<<<<<<<---------------------------------------------------- 4. [[  Palindrome ]] ------------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<---------------------------------------------------- 4. [[  Palindrome ]] --------------------------------------------------------------->>>>>>>>>>>
 
 const str = 'madam';
 function checkPalindrome(str) {
@@ -107,3 +107,36 @@ function getCountCharacters(string) {
      return histogram;
 }
 console.log(getCountCharacters(string)); //{ h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+
+// <<<<<<<<<<<<<<<--------------------------------------------------- 5. [[ Count Unique Numbers ]] ------------------------------------------------------------>>>>>>>>>>>
+/* 
+  - Unique Count - 8
+                    i  j
+  - Conditions -   [1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8];
+               -    i = 0; j = 1;
+               -    if [ i , j ] value match together [i > 1, j > 1] then loop will be running and also j value will increment now j -> 2
+               -    Again [i > 1, j > 2] - here it's not same so it will go in the condition and increment the value of i and put j value in i 
+                    [1, 2, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8] - basically replaced 1,1, -> 1,2
+               -     https://www.youtube.com/watch?v=rs75oZD8lW4&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx&index=4 - logic
+
+*/
+
+let arrOne = [1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8];
+function countUniqueNumbers(arrOne) {
+     if (arrOne.length > 0) {
+          let i = 0;
+          for (let j = 1; j < arrOne.length; j++) {
+               if (arrOne[i] !== arrOne[j]) {
+                    i++;
+                    arrOne[i] = arrOne[j];
+               }
+          }
+          return i + 1;
+     } else {
+          throw new Error('Array is empty');
+     }
+}
+const result = countUniqueNumbers(arrOne);
+console.log(result); //8
+
+// <<<<<<<<<<<<<<<--------------------------------------------------- 6. [[ Count Unique Numbers ]] ------------------------------------------------------------>>>>>>>>>>>
