@@ -91,3 +91,25 @@ for (let i = 0; i < array.length; i++) {
      }
 }
 console.log(array); //[ 1, 4, 5, 20, 78, 80 ]
+
+// <<<<<<<<<<<<<<<------------------------------------------------- 5. [[  Recursive function ]] ------------------------------------------------------------->>>>>>>>>>>
+
+/* 
+    - [ Recursive function ] : When f(n) call itself 
+                             : If f(n) call itself then there must be an end point
+                             : otherwise it will get called for infinite time
+    - Example : Sorting Using Recursive f(n) : [2, 3, 1, 5, 6, 4, 8, 7, 10]
+
+ */
+// Eg - 1
+let counter = 1;
+let numbers = 10;
+function demo(numbers) {
+     if (counter > numbers) {
+          return;
+     }
+     console.log('Recursive function');
+     counter++;
+     demo(numbers); // Recursive f(n)
+}
+demo(numbers);
