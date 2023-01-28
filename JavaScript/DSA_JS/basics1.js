@@ -59,24 +59,21 @@ console.log('The factorial of ' + n + ' is ' + facts);
 
 // <<<<<<<<<<<<<<<---------------------------------------------------- 4. [[  Palindrome ]] ------------------------------------------------------------->>>>>>>>>>>
 
-function checkPalindrome(string) {
-     // find the length of a string
-     const len = string.length;
+const str = 'madam';
+function checkPalindrome(str) {
+     let newStr = str.toLowerCase();
+     let left = 0;
+     let right = newStr.length - 1;
+     while (left < right) {
+          if (newStr[left] !== newStr[right])
+               return `${newStr} is not a palindrome`;
 
-     // loop through half of the string
-     for (let i = 0; i < len / 2; i++) {
-          // check if first and last string are same
-          if (string[i] !== string[len - 1 - i]) {
-               return 'It is not a palindrome';
-          }
+          left++;
+          right--;
      }
-     return 'It is a palindrome';
+     return `${newStr} is a palindrome`;
 }
-
-const string = 'madam'; // level radar civic mom noon
-const value = checkPalindrome(string);
-
-console.log(value);
+console.log(checkPalindrome(str));
 
 // <<<<<<<<<<<<<<<---------------------------------------------------- 5. [[  Unique Array  ]] ----------------------------------------------------------->>>>>>>>>>>
 

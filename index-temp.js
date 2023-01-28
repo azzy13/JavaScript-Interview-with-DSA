@@ -162,17 +162,3 @@ getUniqueAfterMerge(array1, array2); //[ 1, 2, 3, 5 ]
  Hence, during each iteration, if the element equals -1, the element is added to the uniqueArr array using the push() method.
 
 */
-
-const str = 'madami';
-function checkPalindrome(str) {
-     let left = 0;
-     let right = str.length - 1;
-     while (left < right) {
-          if (str[left] !== str[right]) {
-               return false;
-          } else {
-               return true;
-          }
-     }
-}
-console.log(checkPalindrome(str));
