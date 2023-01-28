@@ -139,4 +139,26 @@ function countUniqueNumbers(arrOne) {
 const result = countUniqueNumbers(arrOne);
 console.log(result); //8
 
-// <<<<<<<<<<<<<<<--------------------------------------------------- 6. [[ Count Unique Numbers ]] ------------------------------------------------------------>>>>>>>>>>>
+// <<<<<<<<<<<<<<--------------------------------------------- 6. [[Check Square Elements of Another Array ]] ------------------------------------------------->>>>>>>>>>>
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [1, 9, 4, 16];
+
+function isSquareCheck(arr1, arr2) {
+     for (let i = 0; i < arr1.length; i++) {
+          let isSquare = false;
+          for (let j = 0; j < arr2.length; j++) {
+               if (arr1[i] * arr1[i] === arr2[j]) {
+                    isSquare = true;
+               }
+               if (j === arr2.length - 1) {
+                    if (!isSquare) {
+                         return false;
+                    }
+               }
+          }
+     }
+     return true;
+}
+
+console.log(isSquareCheck(arr1, arr2)); // true
