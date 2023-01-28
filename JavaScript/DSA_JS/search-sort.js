@@ -53,7 +53,7 @@ function merge(leftArr, rightArr) {
      const sortedArr = [];
      while (leftArr.length && rightArr.length) {
           if (leftArr[0] <= rightArr[0]) {
-               sortedArr.push(leftArr.shift()); // remove element from leftarr and push to sortedArr
+               sortedArr.push(leftArr.shift()); // remove element from leftArr and push to sortedArr
           } else {
                sortedArr.push(rightArr.shift());
           }

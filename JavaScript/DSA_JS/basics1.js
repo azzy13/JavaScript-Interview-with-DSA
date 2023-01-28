@@ -139,7 +139,7 @@ function countUniqueNumbers(arrOne) {
 const result = countUniqueNumbers(arrOne);
 console.log(result); //8
 
-// <<<<<<<<<<<<<<--------------------------------------------- 6. [[Check Square Elements of Another Array ]] ------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<--------------------------------------------- 6. [[ Check Square Elements of Another Array ]] ------------------------------------------------->>>>>>>>>>>
 
 let arr1 = [1, 2, 3, 4];
 let arr2 = [1, 9, 4, 16];
@@ -162,3 +162,26 @@ function isSquareCheck(arr1, arr2) {
 }
 
 console.log(isSquareCheck(arr1, arr2)); // true
+
+// <<<<<<<<<<<<------------------------------------------ 7. [[ Find the Maximum Occurring Character in String]] -------------------------------------------->>>>>>>>>>>
+const strOne = 'Hello worldddd'; // d
+
+function findMaximumOccurrenceString(strOne) {
+     let histogram = {};
+     strOne.split('').forEach((element) => {
+          histogram[element] = histogram[element] ? histogram[element] + 1 : 1;
+     });
+
+     let max = 1;
+     let char = strOne[0]; // by default we store the first character of string
+
+     for (let k in histogram) {
+          if (histogram[k] > max) {
+               max = histogram[k];
+               char = k;
+          }
+     }
+     return char;
+}
+const resultOne = findMaximumOccurrenceString(strOne);
+console.log(resultOne); //d
