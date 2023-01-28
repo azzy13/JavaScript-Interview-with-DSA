@@ -27,7 +27,7 @@ for (let i = 0; i < array.length; i++) {
 }
 console.log(array); //[ 1, 4, 5, 20, 78, 80 ]
 
-// <<<<<<<<------------------------------------------------- 2s. [[ Count Characters in String ]] --------------------------------------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------- 2. [[ Count Characters in String - Anagram ]] ----------------------------------------------------->>>>>>>
 let string = 'hello world';
 function getCountCharacters(string) {
      const histogram = {};

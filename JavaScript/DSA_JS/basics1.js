@@ -75,14 +75,35 @@ function checkPalindrome(str) {
 }
 console.log(checkPalindrome(str));
 
-// <<<<<<<<<<<<<<<---------------------------------------------------- 5. [[  Unique Array  ]] ----------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<---------------------------------------------------- 5. [[  Sum Zero Problem  ]] ----------------------------------------------------------->>>>>>>>>>>
+/* 
+   Traverse : To visit each and every element of array
+   [-4, 4] - o/p
+   O(n^2)  Quadratic time complexity
 
-let arr = [1, 2, 3, 3, 4, 4, 5, 6, 6, 7, 8];
-let uniqArr = [];
+*/
+let arr = [-5, -4, -3, -2, 0, 2, 4, 6, 8];
 
-for (let i = 0; i < arr.length; i++) {
-     if (arr[i] === arr[i + 1]) {
-          uniqArr.push(arr[i]);
+function checkSumPairZero(arr) {
+     for (number of arr) {
+          for (let j = 1; j < arr.length; j++) {
+               if (number + arr[j] === 0) return [number, arr[j]];
+          }
      }
 }
-console.log(uniqArr); //[ 3, 4, 6 ]
+console.log(checkSumPairZero(arr)); // [ -4, 4 ]
+
+// <<<<<<<<<<<<<<<------------------------------------------------------- 5. [[  Sum Anagram ]] --------------------------------------------------------------->>>>>>>>>>>
+let string = 'hello world';
+function getCountCharacters(string) {
+     const histogram = {};
+     for (let i = 0; i < string.length; i++) {
+          let char = string[i];
+          if (!histogram[char]) {
+               histogram[char] = 0;
+          }
+          histogram[char]++;
+     }
+     return histogram;
+}
+console.log(getCountCharacters(string)); //{ h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
