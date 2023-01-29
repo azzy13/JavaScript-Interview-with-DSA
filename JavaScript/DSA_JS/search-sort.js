@@ -1,3 +1,13 @@
+// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Search & Sort ]] ------------------------------------------------>>>>>>>>>>>
+/* 
+  1. Binary Search
+  2. Linear Search 
+  3. Merge sort 
+  4. Bubble Sort without in-built method
+  5. Recursive function
+
+*/
+
 // <<<<<<<<<<<<<<<---------------------------------------------- 1. [[   Binary Search  ]] ---------------------------------------------------------->>>>>>>>>>>
 function binarySearch(nums, target) {
      let left = 0;

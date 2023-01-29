@@ -1,3 +1,17 @@
+// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ------------------------------------------------>>>>>>>>>>>
+/* 
+  1. Check Prime Number
+  2. Fibonacci series  up to n terms - Recursive
+  3. Factorial of number Approach One
+  4. Palindrome
+  5. Sum Zero Problem
+  6. String Anagram
+  7. Count Unique Numbers
+  8. Check Square Elements of Another Array
+  9. Find the Maximum Occurring Character in String
+   
+*/
+
 // <<<<<<<<<<<<<<<----------------------------------------------- 1. [[ Check Prime Number  ]] --------------------------------------------------------->>>>>>>>>>>
 
 function isPrime(n) {
@@ -93,7 +107,7 @@ function checkSumPairZero(arr) {
 }
 console.log(checkSumPairZero(arr)); // [ -4, 4 ]
 
-// <<<<<<<<<<<<<<<------------------------------------------------------- 5. [[  Sum Anagram ]] --------------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------------- 6. [[  String Anagram ]] --------------------------------------------------------------->>>>>>>>>>>
 let string = 'hello world';
 function getCountCharacters(string) {
      const histogram = {};
@@ -108,7 +122,7 @@ function getCountCharacters(string) {
 }
 console.log(getCountCharacters(string)); //{ h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
 
-// <<<<<<<<<<<<<<<--------------------------------------------------- 5. [[ Count Unique Numbers ]] ------------------------------------------------------------>>>>>>>>>>>
+// <<<<<<<<<<<<<<<--------------------------------------------------- 7. [[ Count Unique Numbers ]] ------------------------------------------------------------>>>>>>>>>>>
 /* 
   - Unique Count - 8
                     i  j
@@ -139,7 +153,7 @@ function countUniqueNumbers(arrOne) {
 const result = countUniqueNumbers(arrOne);
 console.log(result); //8
 
-// <<<<<<<<<<<<--------------------------------------------- 6. [[ Check Square Elements of Another Array ]] ------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<--------------------------------------------- 8. [[ Check Square Elements of Another Array ]] ------------------------------------------------->>>>>>>>>>>
 
 let arr1 = [1, 2, 3, 4];
 let arr2 = [1, 9, 4, 16];
@@ -163,7 +177,7 @@ function isSquareCheck(arr1, arr2) {
 
 console.log(isSquareCheck(arr1, arr2)); // true
 
-// <<<<<<<<<<<<------------------------------------------ 7. [[ Find the Maximum Occurring Character in String]] -------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<------------------------------------------ 9. [[ Find the Maximum Occurring Character in String]] -------------------------------------------->>>>>>>>>>>
 const strOne = 'Hello worldddd'; // d
 
 function findMaximumOccurrenceString(strOne) {

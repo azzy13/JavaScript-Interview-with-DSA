@@ -1,3 +1,19 @@
+// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ------------------------------------------------>>>>>>>>>>>
+/* 
+  1.  Bubble Sort without in-built method 
+  2.  Count Characters in String - Anagram
+  3.  Reverse String  - Way : [1, 2, 3]
+  4.  Infinite Currying
+  5.  Remove Duplicate Item From Array - Way : [1, 2]
+  6.  Promise  - Way : [1, 2]
+  7.  Factorial of number
+  8.  Check how many times an Element appears in an Array 
+  9.  Sum  & Multiply of Array element
+  10. Swap two numbers with temp
+  11. Flatten the  Array without predefined function
+   
+*/
+
 // <<<<<<<<-------------------------- 1. [[ Bubble Sort without in-built method {Most asked sort question} ]] --------------------------------------------------->>>>>>>
 
 /* 
@@ -101,7 +117,7 @@ function reverseInPlace() {
 }
 console.log(reverseInPlace(strin));
 
-// <<<<<<<<------------------------------------------------------  [[ Infinite Currying ]] --------------------------------------------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------  4. [[ Infinite Currying ]] ------------------------------------------------------------------->>>>>>>
 //Q. USE ADD Function - console.log(add(5)(4)(3)(2)())
 
 function add(a) {
@@ -140,7 +156,7 @@ const calc = {
 const results = calc.add(10).multiply(5).subtract(30).add(10); //30
 console.log(results.total);
 
-// <<<<<<<<---------------------------------------------------  [[ Remove Duplicate Item From Array]] ----------------------------------------------------------->>>>>>>
+// <<<<<<<<--------------------------------------------------- 5. [[ Remove Duplicate Item From Array]] ---------------------------------------------------------->>>>>>>
 //Brute Force Algo
 const aa = [1, 2, 1, 2, 3, 4, 5];
 const bb = [];
@@ -159,7 +175,7 @@ const aaaaa = [1, 2, 1, 2, 3, 4, 5, 6, 7, 7, 6];
 const resultUniqueValues = [...new Set(aaaaa)];
 console.log(resultUniqueValues);
 
-// <<<<<<<<------------------------------------------------------  [[ Promise - Way : 1 ]] ----------------------------------------------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------ 6. [[ Promise - Way : 1 ]] --------------------------------------------------------------------->>>>>>>
 
 const callMe = new Promise((resolve, reject) => {
      if (true) {
@@ -204,7 +220,7 @@ const callMine = async () => {
 };
 callMine(); // I am f ->  I am g -> I am h
 
-// <<<<<<<<------------------------------------------------------  [[ Factorial of number ]] -------------------------------------------------------------------->>>>>>>
+// <<<<<<<<------------------------------------------------------ 7. [[ Factorial of number ]] -------------------------------------------------------------------->>>>>>>
 
 function factorial(n) {
      let fact = 1;
@@ -221,7 +237,7 @@ function factorial(n) {
 const resultt = factorial(5);
 console.log(resultt);
 
-// <<<<<<<<----------------------------------------  [[ Check how many times an Element appears in an Array ]] ---------------------------------------------------->>>>>>>
+// <<<<<<<<---------------------------------------- 8.  [[ Check how many times an Element appears in an Array ]] ---------------------------------------------------->>>>>>>
 
 const arrCount = ['a', 'b', 'a', 'a'];
 let count = 0;
@@ -241,7 +257,7 @@ const result = arri.sort((a, b) => {
 });
 console.log(result); //[ 1, 2, 3, 4, 5 ]
 
-// <<<<<<<<<<<<<<<------------------------------------------------- [[ Sum of Array elements :- Anonymous Function ]] ---------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<----------------------------------------------- 9. [[ Sum of Array elements :- Anonymous Function ]] --------------------------------------------->>>>>>>
 const value = [1, 2, 3, 4, 5];
 const arraySum = function (value) {
      let sum = 0;
@@ -270,7 +286,7 @@ const pro = arr.reduce((a, b) => a * b, 1);
 
 console.log(pro); // 48
 
-// <<<<<<<<<<<<<<<------------------------------------------------------ [[ Swap two numbers with temp ]] ---------------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<----------------------------------------------------  10. [[ Swap two numbers with temp ]] -------------------------------------------------------->>>>>>>
 var a = 1;
 var b = 2;
 var temp; // way-1
@@ -297,7 +313,7 @@ a = a - b;
 
 console.log(a, b); // Arithmetic way -3
 
-// <<<<<<<<<<<<<<<--------------------------------------------   [[ Flatten the  Array without predefined function]] ------------------------------------------------->>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------- 11. [[ Flatten the  Array without predefined function]] ------------------------------------------------>>>>>>>
 
 /*
 https://www.youtube.com/watch?v=abbdJ4Yfm54  - Flatten array + setTimeout best question 
