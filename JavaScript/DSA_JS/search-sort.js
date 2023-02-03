@@ -48,7 +48,10 @@ console.log(linearSearch(number, 8)); //3
 console.log(linearSearch(number, 28)); //-1
 
 // <<<<<<<<<<<<<<<------------------------------------------------ 3. [[   Merge sort  ]] ------------------------------------------------------------->>>>>>>>>>>
+/*
 
+
+ */
 function mergeSort(arr) {
      if (arr.length < 2) {
           return arr;

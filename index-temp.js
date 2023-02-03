@@ -162,3 +162,43 @@ getUniqueAfterMerge(array1, array2); //[ 1, 2, 3, 5 ]
  Hence, during each iteration, if the element equals -1, the element is added to the uniqueArr array using the push() method.
 
 */
+
+/* 
+The slice() method returns a shallow copy of a portion of an array
+ into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. 
+The original array will not be modified. 
+
+
+The splice() method changes the contents of an array by removing or replacing existing elements 
+and/or adding new elements in place. To access part of an array without modifying it, see slice().
+*/
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(2));
+// Expected output: Array ["camel", "duck", "elephant"]
+
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice(1, 5));
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
