@@ -38,7 +38,7 @@ console.log(val); //[ 1, 2, 3, 4, 5, <5 empty items>, 6 ]
 const arrays = [];
 console.log(typeof arrays); //object
 
-// <<<<<<<<<<<<<<<------------------------------------------------ 1. [[ Increment (++) ]] ---------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<<<<------------------------------------------------ 1. [[ Increment (++) ]] ---------------------------------------------0-------->>>>>>>>>>>
 /*-
      ->  The increment (++) operator increments (adds one to) its operand and returns the value before or after the increment, depending on where the operator is placed. 
      -> y is operand and  ++ is operator 
