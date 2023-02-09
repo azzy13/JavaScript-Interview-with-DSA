@@ -202,3 +202,22 @@ months.splice(4, 1, 'May');
 // Replaces 1 element at index 4
 console.log(months);
 // Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+// <<<<<<<<<<<<<------------------------------------------------- [[  IOanyT ]] --------------------------------------------------->>>>>>>>>>>
+const arr = [1, 3, 2, 3, 7, 4, 7, 9, 6, 2];
+
+//duplicate item
+
+function dupArr(arr) {
+     let bb = [];
+
+     for (let i = 0; i < arr.length; i++) {
+          for (let j = i; j < arr.length; j++)
+               if (arr[i] === arr[j + 1]) {
+                    bb.push(arr[i]);
+               }
+     }
+     return bb;
+}
+console.log(dupArr(arr)); //[ 3, 2, 7 ]
+const a = ['a', 'b', 'c', 'd']; //output = "a,b,c,d";
