@@ -1,15 +1,16 @@
-// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ------------------------------------------------>>>>>>>>>>>
+// <<<<<<<<<<<<<<<-------------------------------------------------  [[ List of All Problems]] ------------------------------------------------------->>>>>>>>>>>
 /* 
   1. Check Prime Number
   2. Fibonacci series  up to n terms - Recursive
-  3. Factorial of number Approach One
+  3. Factorial of number 'n' & Recursive Approach
   4. Palindrome
   5. Sum Zero Problem
   6. String Anagram
   7. Count Unique Numbers
   8. Check Square Elements of Another Array
   9. Find the Maximum Occurring Character in String
-   
+  10. Largest Sum of Consecutive Digits 
+  11. Longest Substring Without Repeating Characters [https://www.youtube.com/watch?v=hVPCWIOMxrk&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx&index=20]
 */
 
 // <<<<<<<<<<<<<<<----------------------------------------------- 1. [[ Check Prime Number  ]] --------------------------------------------------------->>>>>>>>>>>
@@ -199,3 +200,5 @@ function findMaximumOccurrenceString(strOne) {
 }
 const resultOne = findMaximumOccurrenceString(strOne);
 console.log(resultOne); //d
+
+// <<<<<<<<<<<<-------------------------------------------- 10. [[   Largest Sum of Consecutive Digits ]] ---------------------------------------------------->>>>>>>>>>>

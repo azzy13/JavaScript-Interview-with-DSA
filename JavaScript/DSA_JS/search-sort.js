@@ -1,10 +1,10 @@
 // <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Search & Sort ]] -------------------------------------------------->>>>>>>>>>>
 /* 
-  1. Binary Search
+  1. Binary Search  [ Divide & Conquerer Technique ]
   2. Linear Search 
   3. Merge sort 
   4. Bubble Sort without in-built method
-  5. Selected Sort
+  5. Selected Sort [https://www.youtube.com/watch?v=766JkxAAFJ4&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx&index=16] 
   6. Recursive function
 
 */
