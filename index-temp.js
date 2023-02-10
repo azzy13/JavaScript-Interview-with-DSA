@@ -221,3 +221,11 @@ function dupArr(arr) {
 }
 console.log(dupArr(arr)); //[ 3, 2, 7 ]
 const a = ['a', 'b', 'c', 'd']; //output = "a,b,c,d";
+
+// <<<<<<<<<<<<<------------------------------------------------- [[  Plann to be skilled ]] --------------------------------------------------->>>>>>>>>>>
+/* 
+1. Solve Technical Suneja 5-8 problems 
+2. Node Js - explore more
+3. AWS - explore more
+4. Leet code - solve problems
+*/
