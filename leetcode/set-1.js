@@ -1,6 +1,26 @@
+// <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ---------------------------------------------------->>>>>>>>>>>
+/* 
+
+  1.  Two Sum 
+  2.  Add Two Numbers
+  13. Roman to Integer
+  4. Promises - Creating Promise, Chaining , Error Handling
+  5. Event Loop, Callback Queue, Microtask Queue
+  6. Undefined vs Not defined
+  7. The Scope Chain, 🔥Scope & Lexical Environment
+  8. Functions Types & Higer Order Function
+  9. Closures
+  10. Objects {}
+  11. IIFE (Immediately Invoked Function Expression)
+  12. Currying
+  13. ['this'] keyword
+  14. Prototype and Prototypal Inheritance 
+
+*/
+
 // <<<<<<<<<<<<<<<------------------------------------------------- 1. [[   Two Sum  ]] -------------------------------------------------------------->>>>>>>>>>>
 
-/*
+/*         [https://www.youtube.com/watch?v=mq6ZQv_apmc&list=PLrClazTqVpJlyey7Szwe_XX9meD4wl2Ma&index=60]
  [[Q]] ->  Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
               Input: nums = [2,7,11,15], target = 9
               Output: [0,1]
@@ -65,3 +85,22 @@ var twoSum = function (nums, target) {
  */
 
 var addTwoNumbers = function (l1, l2) {};
+
+// <<<<<<<<<<<<------------------------------------------------- 13. [[ Roman to Integer  ]] -------------------------------------------------------->>>>>>>>>>>
+
+/*  - [https://www.youtube.com/watch?v=3QH-rpcoAoI]
+    - Roman numerals are represented by seven different symbols: I -1, V-5, X-10, L-50, C-100, D-500 and M-1000.
+      Input: s = "III"
+      Output: 3
+      Explanation: III = 3.
+      Input: s = "LVIII"
+      Output: 58
+  
+ */
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+
+var romanToInt = function (s) {};
