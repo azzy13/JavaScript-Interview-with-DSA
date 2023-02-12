@@ -130,7 +130,7 @@ console.log(romanToInt('IV')); //4
        Output: "fl"  
    
 
-     - strs[0][0] - here strs[0] as 1 will return 'flower' in loop and strs[0] as 2 will return each element on flower 'f'
+     - strs[0][0] - here strs[0] as 1 will return 'flower' in loop and strs[0] as 2 will return each element of flower 'f'
             1  2
      - Comparing each charachter of element of array : 'f' in all 3 element then 'l' in all 3 element and so on.
        
