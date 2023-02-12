@@ -1,10 +1,10 @@
 // <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ---------------------------------------------------->>>>>>>>>>>
-/* 
+/* https://www.youtube.com/watch?v=M04IJUf_jEQ&list=PLrClazTqVpJmY0TcHROxfaz62i31uiFzr - RemoteState
 
   1.  Two Sum 
   2.  Add Two Numbers
   13. Roman to Integer
-  4. Promises - Creating Promise, Chaining , Error Handling
+  14. Longest Common Prefix
   5. Event Loop, Callback Queue, Microtask Queue
   6. Undefined vs Not defined
   7. The Scope Chain, 🔥Scope & Lexical Environment
@@ -86,7 +86,7 @@ var twoSum = function (nums, target) {
 
 var addTwoNumbers = function (l1, l2) {};
 
-// <<<<<<<<<<<<------------------------------------------------- 13. [[ Roman to Integer  ]] -------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<---------------------------------------------------- 13. [[ Roman to Integer ]] ------------------------------------------------------>>>>>>>>>>>
 
 /*  - [https://www.youtube.com/watch?v=3QH-rpcoAoI]
     - Roman numerals are represented by seven different symbols: I -1, V-5, X-10, L-50, C-100, D-500 and M-1000.
@@ -129,3 +129,36 @@ var romanToInt = function (s) {
      return result;
 };
 console.log(romanToInt('IV')); //4
+
+// <<<<<<<<<<<<------------------------------------------------- 13. [[ Longest Common Prefix  ]] ------------------------------------------------------->>>>>>>>>>>
+
+/*  - [https://www.youtube.com/watch?v=0SF6RLMYBcE]
+    - Write a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+
+       Input: strs = ["flower","flow","flight"]
+       Output: "fl"  
+   
+
+     - strs[0][0] - here strs[0] as 1 will return 'flower' in loop and strs[0] as 2 will return each element on flower 'f'
+            1  2
+     - Comparing each charachter of element of array : 'f' in all 3 element then 'l' in all 3 element and so on.
+       
+  
+ */
+
+var longestCommonPrefix = function (strs) {
+     if (strs.length === 0) {
+          return '';
+     }
+
+     for (let i = 0; i < strs[0].length; i++) {
+          for (let j = 1; j < strs.length; j++) {
+               if (strs[0][i] != strs[j][i]) {
+                    return strs[0].slice(0, i);
+               }
+          }
+     }
+     return strs[0];
+};
+
+console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
