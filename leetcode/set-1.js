@@ -5,16 +5,7 @@
   2.  Add Two Numbers
   13. Roman to Integer
   14. Longest Common Prefix
-  5. Event Loop, Callback Queue, Microtask Queue
-  6. Undefined vs Not defined
-  7. The Scope Chain, 🔥Scope & Lexical Environment
-  8. Functions Types & Higer Order Function
-  9. Closures
-  10. Objects {}
-  11. IIFE (Immediately Invoked Function Expression)
-  12. Currying
-  13. ['this'] keyword
-  14. Prototype and Prototypal Inheritance 
+  
 
 */
 
