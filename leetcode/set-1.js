@@ -11,14 +11,20 @@
 
 /*
 values being the keys and indices being the values
-    [keys] ->  [values]
+   
       2  : 0
       7  : 1
       11 : 2
       15 : 3
+      -creating  a hash and the values of each of the nums [2,7,11,15] is gonna be the set to the respective keys
+
+      - Here we  create a hash [ const hash = {} ]
+      - set the hash and map it to values (indices)
+      - Here we get the values :  let value = nums[i];
+      - Here we set the value to the index :  hash[value] = i;
  */
 
-const twoSum = function (nums, target) {
+var twoSum = function (nums, target) {
      const hash = {};
 
      for (let i = 0; i < nums.length; i++) {
@@ -27,11 +33,35 @@ const twoSum = function (nums, target) {
      }
 
      for (let i = 0; i < nums.length; i++) {
-          let potentialKey = target - nums[i];
-          if (hash[potentialKey] && hash[potentialKey] !== i) {
-               return [i, hash[potentialKey]];
+          let potentialValue = target - nums[i];
+          if (hash[potentialValue] && hash[potentialValue] !== i) {
+               return [i, hash[potentialValue]];
           }
      }
 };
 
 console.log(twoSum([2, 7, 11, 15], 9));
+
+// <<<<<<<<<<<<<<<--------------------------------------------  [[   Two Sum : Way - 2  ]] --------------------------------------------------------->>>>>>>>>>>
+
+var twoSum = function (nums, target) {
+     for (let i = 0; i < nums.length; i++) {
+          for (j = i + 1; j < nums.length; j++) {
+               if (nums[i] + nums[j] === target) {
+                    return [i, j];
+               }
+          }
+     }
+}; // TC : O(n)^2
+
+// <<<<<<<<<<<<------------------------------------------------- 2. [[   Add Two Numbers  ]] -------------------------------------------------------->>>>>>>>>>>
+
+/*
+   function ListNode(val, next) {
+     this.val = val === undefined ? 0 : val;
+     this.next = next === undefined ? null : next;
+}
+
+ */
+
+var addTwoNumbers = function (l1, l2) {};
