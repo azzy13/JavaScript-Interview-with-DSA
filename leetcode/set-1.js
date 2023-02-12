@@ -5,13 +5,13 @@
               Input: nums = [2,7,11,15], target = 9
               Output: [0,1]
               Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+              Time Complexity :  O(n)
+              Space Complexity : O(n)
               
-
  */
 
 /*
-values being the keys and indices being the values
-   
+
       2  : 0
       7  : 1
       11 : 2
