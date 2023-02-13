@@ -1,10 +1,12 @@
 // <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ---------------------------------------------------->>>>>>>>>>>
 /* https://www.youtube.com/watch?v=M04IJUf_jEQ&list=PLrClazTqVpJmY0TcHROxfaz62i31uiFzr - RemoteState
+   https://leetcode.com/problems/merge-two-sorted-lists/
 
   1.  Two Sum 
   2.  Add Two Numbers
   13. Roman to Integer
   14. Longest Common Prefix
+  20. Valid Parentheses
   
 
 */
@@ -153,3 +155,44 @@ var longestCommonPrefix = function (strs) {
 };
 
 console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
+
+// <<<<<<<<<<<<<<<----------------------------------------------- 20. [[ Valid Parentheses ]] ---------------------------------------------------------->>>>>>>>>>>
+
+/* 
+  - Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+     Input: s = "()[]{}"
+     Output: true
+
+     Input: s = "(]"
+     Output: false
+
+     - if  '(', '{', '[' open bracket then we push into stack
+     - if it's is closed pop the element for the stack
+
+*/
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+
+var isValid = function (s) {
+     let stack = [];
+
+     for (let i = 0; i < s.length; i++) {
+          let top = stack[stack.length - 1];
+
+          if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
+               stack.push(s[i]);
+          } else if (
+               (s[i] == ')' && top == '(') ||
+               (s[i] == '}' && top == '{') ||
+               (s[i] == ']' && top == '[')
+          ) {
+               stack.pop();
+          } else return false;
+     }
+     return stack.length === 0;
+};
+
+console.log(isValid('()[]{}'));
