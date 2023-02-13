@@ -229,3 +229,16 @@ const a = ['a', 'b', 'c', 'd']; //output = "a,b,c,d";
 3. AWS - explore more
 4. Leet code - solve problems
 */
+
+//Aloha Technologies
+/* 
+1. Fabonnic Series  || fiboncci series and printing it in Reverse Order
+2. Separate 1 and 0 in array 
+3. count a Word in String
+4. Factorial of number
+5.  prime number
+6. Write a program to print the words that contains vowel in it.
+
+
+
+*/

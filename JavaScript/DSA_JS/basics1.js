@@ -11,6 +11,7 @@
   9. Find the Maximum Occurring Character in String
   10. Largest Sum of Consecutive Digits 
   11. Longest Substring Without Repeating Characters [https://www.youtube.com/watch?v=hVPCWIOMxrk&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx&index=20]
+  12. Words that contains vowel
 */
 
 // <<<<<<<<<<<<<<<----------------------------------------------- 1. [[ Check Prime Number  ]] --------------------------------------------------------->>>>>>>>>>>
@@ -35,8 +36,6 @@ function fibonaciNumber(n) {
      let n1 = 0,
           n2 = 1,
           nextTerm;
-
-     console.log('Fibonacci Series:');
 
      for (let i = 0; i <= n; i++) {
           console.log(n1);
@@ -202,3 +201,24 @@ const resultOne = findMaximumOccurrenceString(strOne);
 console.log(resultOne); //d
 
 // <<<<<<<<<<<<-------------------------------------------- 10. [[   Largest Sum of Consecutive Digits ]] ---------------------------------------------------->>>>>>>>>>>
+
+// <<<<<<<<<<<<----------------------------------------------- 12. [[   Words that contains vowel  ]] -------------------------------------------------------->>>>>>>>>>>
+let s = 'welcome';
+
+for (let i = 0; i <= s.length - 1; i++) {
+     let c = s[i]; // or s.charAt(i)
+     if (
+          c == 'a' ||
+          c == 'e' ||
+          c == 'i' ||
+          c == 'o' ||
+          c == 'u' ||
+          c == 'A' ||
+          c == 'E' ||
+          c == 'I' ||
+          c == 'O' ||
+          c == 'U'
+     ) {
+          console.log(c); // e o e
+     }
+}
