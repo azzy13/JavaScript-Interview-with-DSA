@@ -164,6 +164,7 @@ const len = aa.length;
 
 for (let i = 0; i < len; i++) {
      if (bb.indexOf(aa[i]) === -1) {
+          // before pushing to bb , it will check the element is present or not.
           bb.push(aa[i]);
      }
 }
