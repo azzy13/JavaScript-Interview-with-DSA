@@ -167,7 +167,7 @@ console.log(longestCommonPrefix(['flower', 'flow', 'flight']));
      Output: false
 
      - if  '(', '{', '[' open bracket then we push into stack
-     - if it's is closed pop the element for the stack
+     - if it's is closed bracket pop the element from the stack and compare it
 
 */
 
@@ -196,3 +196,5 @@ var isValid = function (s) {
 };
 
 console.log(isValid('()[]{}'));
+
+// <<<<<<<<<<<<<<<----------------------------------------------- 20. [[ Valid Parentheses ]] ---------------------------------------------------------->>>>>>>>>>>
