@@ -69,7 +69,7 @@ let a=10
 ==> line 15 hasn't been executed but variable are hosted (a) in a separate space or memory (Script) and it was also assigned undefined but it has not been initialized 
         - this phase is called temporal dead zone until it goes to line no. 16 and temporal zone is ended
   
-==> Temporal deal zone is a time since when let or const value is hoisted and till it is assigned some values.
+==> Temporal dead zone is a time since when let or const value is hoisted and till it is assigned some values.
 
 
 1.  let and const are hoisted. we can't use them before initialization is result of "temporal dead zone" 
