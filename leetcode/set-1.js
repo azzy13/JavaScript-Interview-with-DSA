@@ -199,3 +199,46 @@ var isValid = function (s) {
 console.log(isValid('()[]{}'));
 
 // <<<<<<<<<<<<<<<--------------------------------------------- 21. [[  Merge Two Sorted Lists ]] ---------------------------------------------------->>>>>>>>>>>
+/**  [[https://www.youtube.com/watch?v=W0Mwqk-uPsk&t=237s]]
+ *   Definition for singly-linked list.
+ *   function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ *   }
+ */
+
+/*
+    -  dummyHead :   create new linked list 
+    -  currentNode : it will itterate through the list
+    -  will take node or value of first list l1 and list l2 and compare it , smaller will be pushed into new list
+ 
+ */
+
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ * @return {ListNode}
+ */
+
+var mergeTwoLists = function (l1, l2) {
+     let dummyHead = new ListNode(0);
+     let currentNode = dummyHead; // it will itterate through this list
+
+     while (l1 != null && l2 != null) {
+          if (l1.val < l2.val) {
+               currentNode.next = l1;
+               l1 = l1.next;
+          } else {
+               currentNode.next = l2;
+               l2 = l2.next;
+          }
+          currentNode = currentNode.next;
+     }
+     if (l1 !== null) {
+          currentNode.next = l1;
+     }
+     if (l2 !== null) {
+          currentNode.next = l2;
+     }
+     return dummyHead.next;
+};
