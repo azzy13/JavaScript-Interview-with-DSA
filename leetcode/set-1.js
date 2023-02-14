@@ -1,13 +1,14 @@
 // <<<<<<<<<<<<<<<-----------------------------------------------  [[ List of All Problems]] ---------------------------------------------------->>>>>>>>>>>
 /* https://www.youtube.com/watch?v=M04IJUf_jEQ&list=PLrClazTqVpJmY0TcHROxfaz62i31uiFzr - RemoteState
-   https://leetcode.com/problems/merge-two-sorted-lists/
 
-  1.  Two Sum 
-  2.  Add Two Numbers
-  13. Roman to Integer
-  14. Longest Common Prefix
-  20. Valid Parentheses
-  21. Merge Two Sorted Lists
+
+  1.   Two Sum 
+  2.   Add Two Numbers
+  13.  Roman to Integer
+  14.  Longest Common Prefix
+  20.  Valid Parentheses
+  21.  Merge Two Sorted Lists
+  189. Rotate Array
   
 
 */
@@ -241,4 +242,55 @@ var mergeTwoLists = function (l1, l2) {
           currentNode.next = l2;
      }
      return dummyHead.next;
+};
+
+// <<<<<<<<<<<<<<<----------------------------------------------- 189. [[  Rotate Array    ]] ----------------------------------------------------->>>>>>>>>>>
+/*   
+    - Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+    - Input: nums = [1,2,3,4,5,6,7], k = 3
+        Output: [5,6,7,1,2,3,4]
+          Explanation:
+            rotate 1 steps to the right: [7,1,2,3,4,5,6]
+            rotate 2 steps to the right: [6,7,1,2,3,4,5]
+            rotate 3 steps to the right: [5,6,7,1,2,3,4]
+    - k = k % nums.length :-  If 'k' is larger than length of nums
+
+let reverseNums = (nums, start, end) => {
+     while (start < end) {
+          let temp = nums[start];
+          nums[start] = nums[end];
+          nums[end] = temp;
+
+          start++;
+          end--;
+     }
+};
+
+var rotate = function (nums, k) {
+     k = k % nums.length;
+     reverseNums(nums, 0, nums.length - 1);
+     reverseNums(nums, 0, k - 1);
+     reverseNums(nums, k, nums.length - 1);
+};
+ */
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+
+let reverseNums = (nums, start, end) => {
+     while (start < end) {
+          [nums[start], nums[end]] = [nums[end], nums[start]];
+          start++;
+          end--;
+     }
+};
+
+var rotate = function (nums, k) {
+     k = k % nums.length;
+     reverseNums(nums, 0, nums.length - 1);
+     reverseNums(nums, 0, k - 1);
+     reverseNums(nums, k, nums.length - 1);
 };
