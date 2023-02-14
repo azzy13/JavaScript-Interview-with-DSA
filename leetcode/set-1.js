@@ -9,8 +9,9 @@
   20.  Valid Parentheses
   21.  Merge Two Sorted Lists
   189. Rotate Array
+  26.  Remove Duplicates from Sorted Array
   
-
+//Find duplicate or repeat elements in js array
 */
 
 // <<<<<<<<<<<<<<<------------------------------------------------- 1. [[   Two Sum  ]] -------------------------------------------------------------->>>>>>>>>>>
@@ -293,4 +294,17 @@ var rotate = function (nums, k) {
      reverseNums(nums, 0, nums.length - 1);
      reverseNums(nums, 0, k - 1);
      reverseNums(nums, k, nums.length - 1);
+};
+
+// <<<<<<<<<<<--------------------------------------- 189. [[ Remove Duplicates from Sorted Array   ]] -------------------------------------------->>>>>>>>>>>
+
+// splice will not modify arr and remove element form specific position  nums.splice(i, 1); i -> position and 1 -> one element should be deleted
+var removeDuplicates = function (nums) {
+     for (let i = 0; i < nums.length; i++) {
+          for (let j = nums.length; j >= i + 1; j--) {
+               if (nums[i] === nums[j]) {
+                    nums.splice(i, 1);
+               }
+          }
+     }
 };

@@ -239,6 +239,9 @@ const a = ['a', 'b', 'c', 'd']; //output = "a,b,c,d";
 5.  prime number
 6. Write a program to print the words that contains vowel in it.
 
+Appinventiv
+ - JS basics and ES6 questions
+ - merge sort 
+ - Find Duplicate Numbers in List 2. Draw Pascal Triangle
 
-
-*/
+ */
