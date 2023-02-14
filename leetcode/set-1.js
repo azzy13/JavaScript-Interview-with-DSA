@@ -253,7 +253,7 @@ var mergeTwoLists = function (l1, l2) {
             rotate 1 steps to the right: [7,1,2,3,4,5,6]
             rotate 2 steps to the right: [6,7,1,2,3,4,5]
             rotate 3 steps to the right: [5,6,7,1,2,3,4]
-    - k = k % nums.length :-  If 'k' is larger than length of nums
+    - k = k % nums.length :-  If 'k' is larger than length of nums - this works when in array there will be two or one elements"
 
 let reverseNums = (nums, start, end) => {
      while (start < end) {
