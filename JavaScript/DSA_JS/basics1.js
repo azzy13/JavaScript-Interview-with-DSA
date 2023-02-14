@@ -12,6 +12,7 @@
   10. Largest Sum of Consecutive Digits 
   11. Longest Substring Without Repeating Characters [https://www.youtube.com/watch?v=hVPCWIOMxrk&list=PL_HlKez9XCSOi5thYDzipbJ2pEdzop7vx&index=20]
   12. Words that contains vowel
+  13. Words count
 */
 
 // <<<<<<<<<<<<<<<----------------------------------------------- 1. [[ Check Prime Number  ]] --------------------------------------------------------->>>>>>>>>>>
@@ -200,9 +201,9 @@ function findMaximumOccurrenceString(strOne) {
 const resultOne = findMaximumOccurrenceString(strOne);
 console.log(resultOne); //d
 
-// <<<<<<<<<<<<-------------------------------------------- 10. [[   Largest Sum of Consecutive Digits ]] ---------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<-------------------------------------------- 10. [[   Largest Sum of Consecutive Digits ]] ------------------------------------------------->>>>>>>>>>>
 
-// <<<<<<<<<<<<----------------------------------------------- 12. [[   Words that contains vowel  ]] -------------------------------------------------------->>>>>>>>>>>
+// <<<<<<<<<<<<----------------------------------------------- 12. [[   Words that contains vowel  ]] ----------------------------------------------------->>>>>>>>>>>
 let s = 'welcome';
 
 for (let i = 0; i <= s.length - 1; i++) {
@@ -222,3 +223,17 @@ for (let i = 0; i <= s.length - 1; i++) {
           console.log(c); // e o e
      }
 }
+
+// <<<<<<<<<<<<----------------------------------------------------- 13. [[   Words count  ]] -------------------------------------------------------------->>>>>>>>>>>
+function wordCount(w) {
+     let count = 0;
+     let words = w.split(' ');
+     for (i = 0; i < words.length; i++) {
+          if (words[i] != '') {
+               count += 1;
+          }
+     }
+
+     return count;
+}
+console.log(wordCount('This is a list of words')); //6
