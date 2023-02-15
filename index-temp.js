@@ -245,3 +245,10 @@ Appinventiv
  - Find Duplicate Numbers in List 2. Draw Pascal Triangle
 
  */
+
+//The split() method splits a string into an array of substrings.
+
+let str1 = 'Hire the top 1% freelance developers';
+
+const split_string = str1.split(' ');
+console.log(split_string); //[ 'Hire', 'the', 'top', '1%', 'freelance', 'developers' ]

@@ -10,8 +10,8 @@
   21.  Merge Two Sorted Lists
   189. Rotate Array
   26.  Remove Duplicates from Sorted Array
-  
-//Find duplicate or repeat elements in js array
+  58.  Length of Last Word
+\
 */
 
 // <<<<<<<<<<<<<<<------------------------------------------------- 1. [[   Two Sum  ]] -------------------------------------------------------------->>>>>>>>>>>
@@ -307,4 +307,24 @@ var removeDuplicates = function (nums) {
                }
           }
      }
+}; /* 
+
+
+*/
+
+// <<<<<<<<<<<<<<<---------------------------------------------- 58. [[Length of Last Word ]] -------------------------------------------------------->>>>>>>>>>>
+/*
+
+    - convert string into array - with split method we can covert string to array 
+    - trim will remove white spaces from left or right of the string
+*/
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function (s) {
+     if (s.length === 0) return 0;
+     let arr = s.trim().split(' ');
+     return arr[arr.length - 1].length;
 };
