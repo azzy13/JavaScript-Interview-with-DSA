@@ -2,6 +2,7 @@
 /* https://www.youtube.com/watch?v=M04IJUf_jEQ&list=PLrClazTqVpJmY0TcHROxfaz62i31uiFzr - RemoteState
 
 
+ :: [[ Easy ]]
   1.   Two Sum 
   2.   Add Two Numbers
   13.  Roman to Integer
@@ -11,6 +12,11 @@
   189. Rotate Array
   26.  Remove Duplicates from Sorted Array
   58.  Length of Last Word
+  27.  Remove Element
+
+
+  :: [[ Medium ]]
+  33. Search in Rotated Sorted Array
 \
 */
 
@@ -328,3 +334,33 @@ var lengthOfLastWord = function (s) {
      let arr = s.trim().split(' ');
      return arr[arr.length - 1].length;
 };
+
+// <<<<<<<<<<<<<<<---------------------------------------------- 27. [[  Remove Element  ]] -------------------------------------------------------->>>>>>>>>>>
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function (nums, val) {
+     for (let i = nums.length; i >= 0; i--) {
+          if (nums[i] === val) {
+               nums.splice(i, 1); // splice will remove elements form specific postion of an original array
+          }
+     }
+};
+
+// <<<<<<<<<<<------------------------------------------ 33. [[  Search in Rotated Sorted Array ]] ------------------------------------------------>>>>>>>>>>>
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+
+/* 
+  Input: nums = [4,5,6,7,0,1,2], target = 0
+  Output: 4
+
+
+*/
+
+var search = function (nums, target) {};
